@@ -397,7 +397,6 @@
 
             .mainWrapper {
                 display: flex;
-                flex-wrap: wrap;
                 gap: 15px;
             }
 
@@ -794,16 +793,9 @@
             /* Featured NFTs UI 부분 */
             &__featuredBox {
 
-                .mainWrapper {
-                    display: flex;
-                    flex-wrap: nowrap;
-                    overflow: hidden;
-                    width: 100%;
-                }
-
                 .wrapper {
                     width: calc((100% - 48px) / 3);
-                    flex-shrink: 0;
+                    flex-shrink: 0; // 크기가 줄어들지 않게
 
                     .nftImage {
                         width: 100%;
@@ -821,9 +813,6 @@
             &__creatorsBox {
 
                 .mainWrapper {
-                    flex-wrap: nowrap;
-                    overflow: hidden;
-
                     gap: 12px;
                 }
 
@@ -843,14 +832,6 @@
 
             /* Explore UI 부분 */
             &__exploreBox {
-
-                .mainWrapper {
-                    display: flex;
-                    overflow: hidden;
-                    width: 100%;
-                    height: 790px;
-                    
-                }
 
                 .wrapper {
                     width: calc((100% - 48px) / 3);

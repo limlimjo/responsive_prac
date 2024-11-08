@@ -10,11 +10,40 @@ const index = () => {
     const [nftInfo, setNftInfo] = useState([]);
     const [creatorInfo, setCreatorInfo] = useState([]);
     const [exploreInfo, setExploreInfo] = useState([]);
+    const [nftInfoVisible, setNftInfoVisible] = useState(5);
+    const [creatorInfoVisible, setCreatorInfoVisible] = useState(7);
+    const [exploreInfoVisible, setExploreInfoVisible] = useState(10);
   
     useEffect(() => {
         setNftInfo(nftData.slice(0, 5));
         setCreatorInfo(creatorData);
         setExploreInfo(nftData.slice(0, 10));
+    }, []);
+
+    // 화면 크기에 따라 카드 수 변경
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 1024) {
+                setNftInfoVisible(3);
+                setCreatorInfoVisible(5);
+                setExploreInfoVisible(6);
+            } else {
+                setNftInfoVisible(5);
+                setCreatorInfoVisible(7);
+                setExploreInfoVisible(10);
+            }
+        };
+
+        // 초기 사이즈 확인
+        handleResize();
+
+        // 사용자가 화면 크기 변경할 때마다 handleResize 함수 실행
+        window.addEventListener('resize', handleResize);
+        
+        // 컴포넌트가 사라질 때 resize 이벤트 리스너 제거
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
     }, []);
 
     // const handleClick = () => {
@@ -81,7 +110,7 @@ const index = () => {
                         </span>
                     </div>
                     <div className={styles.mainWrapper}>
-                    {nftInfo.map((item) => (
+                    {nftInfo.slice(0, nftInfoVisible).map((item) => (
                         <div className={styles.wrapper} key={item.id}>
                             <div className={styles.wrapper__image}>
                                 <a className={styles.wrapper__image__heartIcon}>
@@ -125,7 +154,7 @@ const index = () => {
                         <span className={styles.titleWrapper__more}>See All</span>
                     </div>
                     <div className={styles.mainWrapper}>
-                    {creatorInfo.map((item) => (
+                    {creatorInfo.slice(0, creatorInfoVisible).map((item) => (
                         <div className={styles.wrapper}>
                             <div className={styles.wrapper__rank}>{item.rank}</div>
                             <div className={styles.wrapper__desc}>
@@ -161,7 +190,7 @@ const index = () => {
                         </div>
                     </div>
                     <div className={styles.mainWrapper}>
-                    {exploreInfo.map((item) => (
+                    {exploreInfo.slice(0, exploreInfoVisible).map((item) => (
                         <div className={styles.wrapper} key={item.id}>
                             <div className={styles.wrapper__image}>
                                 <a className={styles.wrapper__image__heartIcon}>
