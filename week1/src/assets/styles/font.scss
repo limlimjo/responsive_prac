@@ -6,3 +6,59 @@
 
 // font-family: inter
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// H1
+@mixin H1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 110%;
+}
+
+// H2
+@mixin H2 {
+    font-size: 43px;
+    font-weight: 800;
+    line-height: 110%;
+}
+
+// H3
+@mixin H3 {
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+// H4
+@mixin H4 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 42px;
+}
+
+// H5
+@mixin H5 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 160%;
+}
+
+// Base (Body)
+@mixin Base {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+// Base (Body 2)
+@mixin Base2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+// Caption
+@mixin Caption {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 110%;
+}

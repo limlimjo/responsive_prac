@@ -23,7 +23,11 @@ const index = () => {
     // 화면 크기에 따라 카드 수 변경
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 1024) {
+            if (window.innerWidth <= 375) {
+                setNftInfoVisible(2);
+                setCreatorInfoVisible(4);
+                setExploreInfoVisible(3);
+            } else if (window.innerWidth <= 1024) {
                 setNftInfoVisible(3);
                 setCreatorInfoVisible(5);
                 setExploreInfoVisible(6);
@@ -57,7 +61,7 @@ const index = () => {
             <div className={styles.page__contents}>
                 {/* NFTs Intro UI 부분 START */}
                 <div className={styles.page__contents__introBox}>
-                    <img src="src/assets/images/image-intro.png" alt="" />
+                    <img src="src/assets/images/intro/image_intro.png" alt="" />
                     <div className={styles.wrapper}>
                         <div className={styles.wrapper__left}>
                             <span className={styles.wrapper__left__title}>
@@ -100,6 +104,16 @@ const index = () => {
                         </div>
                     </div>
                 </div>
+                <div className={styles.page__contents__introBoxBtn}>
+                    <button className={styles.discoverBtn}>
+                        <span>Discover now</span>
+                        <img src="src/assets/images/common/icon/image_arrowRight.svg" alt="" />
+                    </button>
+                    <button className={styles.createBtn}>
+                        <img src="src/assets/images/common/icon/image_diamond_purple.svg" alt="" />
+                        <span>Create your own</span>
+                    </button>
+                </div>
                 {/* Featured NTFS UI 부분 */}
                 <div className={styles.page__contents__featuredBox}>
                     <div className={styles.titleWrapper}>
@@ -108,6 +122,7 @@ const index = () => {
                             <img src="src/assets/images/common/icon/image_left.svg" alt="" />
                             <img src="src/assets/images/common/icon/image_right.svg" alt="" />
                         </span>
+                        <span className={styles.titleWrapper__more}>See All</span>
                     </div>
                     <div className={styles.mainWrapper}>
                     {nftInfo.slice(0, nftInfoVisible).map((item) => (

@@ -19,6 +19,7 @@
 
         &__introBox {
             width: 100%;
+            height: 533px;
             
             position: relative;
 
@@ -52,15 +53,13 @@
                     padding-left: 48px;
 
                     &__title {
-                        margin-bottom: 4px;
-
-                        color: $color-white-000;
-                        font-size: 3rem;
-                        font-weight: 700;
+                        @include H1;
+                        color: $color-text-004;
+                        margin-bottom: 24px;
                     }
 
                     &__desc {
-                        color: $color-white-000;
+                        color: $color-text-004;
                         margin-bottom: 32px;
                     }
 
@@ -77,9 +76,9 @@
                             gap: 10px;
                             
                             text-align: center;
-                            color: #FFFFFF;
+                            color: $color-text-004;
     
-                            background-color: #866AFA;
+                            background-color: $color-purple-001;
     
                             border-radius: 24px;
                             border: none;
@@ -100,12 +99,12 @@
                             gap: 10px;
                             
                             text-align: center;
-                            color: #FFFFFF;
+                            color: $color-text-004;
     
                             background-color: transparent;
                             
                             border-radius: 24px;
-                            border: 1px solid #FFFFFF;
+                            border: 1px solid $color-text-004;
 
                             img {
                                 width: 24px;
@@ -147,10 +146,10 @@
                         }
                         
                         span {
-                            color: #FFFFFF;
+                            color: $color-text-004;
                         }
                         span:first-of-type {
-                            font-size: 28px;
+                            @include H4;
                         }
                     }
 
@@ -172,10 +171,10 @@
                         right: 233px;
 
                         span {
-                            color: #FFFFFF;
+                            color: $color-text-004;
                         }
                         span:first-of-type {
-                            font-size: 28px;
+                            @include H4;
                         }
 
                         .leftUsersBox {
@@ -204,6 +203,10 @@
             }
         }
 
+        &__introBoxBtn {
+            display: none;
+        }
+
         &__featuredBox {
 
             width: 100%;
@@ -218,13 +221,16 @@
 
                 &__title {
                     display: inline-block;
-                    font-size: 37px;
-                    color: #6F4FF2;
-                    font-weight: bold;
+                    @include H3;
+                    color: $color-purple-000;
                 }
 
                 &__next {
-                    color: #6F4FF2;
+                    color: $color-purple-000;
+                }
+
+                &__more {
+                    display: none;
                 }
             }
 
@@ -241,7 +247,7 @@
                 padding: 12px;
 
                 border-radius: 15px;
-                border: 1px solid #F1F1F2;
+                border: 1px solid $color-neteral-003;
 
                 &__image {
                     position: relative;
@@ -256,7 +262,7 @@
                         height: 24px;
 
                         border-radius: 50%;
-                        background-color: #FFFFFF;
+                        background-color: $color-text-004;
 
                         position: absolute; /* 가장 가까운 relative를 기준으로 position이 잡히게 됨 */
                         left: 8px;
@@ -272,9 +278,9 @@
                         padding: 4px 0;
 
                         border-radius: 24px;
-                        background-color: #FFFFFF;
+                        background-color: $color-text-004;
 
-                        font-size: 12px;
+                        @include Caption;
 
                         position: absolute;
                         right: 8px;
@@ -307,14 +313,14 @@
                 &__desc {
 
                     &__title {
-                        font-size: 21px;
-                        font-weight: bold;
-                        color: #6F4FF2;
+                        @include H5;
+                        color: $color-purple-000;
                         
                         display: inline-block;
                         margin-bottom: 12px;
 
                         /* 문장이 길어질 때 사용 */
+                        width: 100%;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis; // 글자가 넘어가면 말줄임(...) 표시
@@ -323,7 +329,7 @@
                     &__users {
                         display: flex;
                         align-items: center;
-                        border-bottom: 1px solid #D3D4D6;
+                        border-bottom: 1px solid $color-neteral-002;
                         padding-bottom: 10px;
 
                         img:nth-child(2) {
@@ -331,7 +337,7 @@
                         }
                         
                         span {
-                            font-size: 12px;
+                            @include Caption;
                             margin-left: 8px;
                         }
 
@@ -346,15 +352,15 @@
 
                         &__currencyContent {
                             .currencyTitle {
-                                font-size: 12px;
-                                color: #717171;
+                                @include Caption;
+                                color: $color-text-003;
                             }
                             .currencyImage {
                                 display: flex;
                                 align-items: center;
                                 .currency {
-                                    font-size: 12px;
-                                    color: #202020;
+                                    @include Caption;
+                                    color: $color-text-001;
                                 }
                             }
                         }
@@ -366,8 +372,8 @@
                             border-radius: 24px;
                             border: none;
 
-                            color:#FFFFFF;
-                            background-color: #866AFA;
+                            color:$color-text-004;
+                            background-color: $color-purple-001;
                         }
                     }
                 }
@@ -387,11 +393,10 @@
                 margin-bottom: 43px;
                 &__title {
                     display: inline-block;
-                    font-size: 37px;
-                    font-weight: bold;
+                    @include H3;
                 }
                 &__more {
-                    color: #6F4FF2;
+                    color: $color-purple-000;
                 }
             }
 
@@ -415,8 +420,8 @@
                     margin: 0 auto;
                     margin-bottom: -10px;
 
-                    background-color: #B6A5FE;
-                    color: #FFFFFF;
+                    background-color: $color-purple-003;
+                    color: $color-text-004;
 
                     position: relative;
                     z-index: 2;
@@ -428,7 +433,7 @@
                     justify-content: center;
                     align-items: center;
 
-                    border: 1px solid #D3D4D6;
+                    border: 1px solid $color-neteral-002;
                     border-radius: 12px;
 
                     padding: 16px 0;
@@ -436,17 +441,23 @@
                     gap: 4px;
 
                     .name {
-                        font-size: 21px;
-                        font-weight: bold;
+                        @include H5;
+                        text-align: center;
+
+                        /* 문장이 길어질 때 사용 */
+                        width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis; // 글자가 넘어가면 말줄임(...) 표시
                     }
 
                     .account {
-                        font-size: 12px;
+                        @include Caption;
                     }
 
                     .items {
-                        font-size: 12px;
-                        color: #6F4FF2;
+                        @include Caption;
+                        color: $color-purple-000;
                     }
                 }
             }
@@ -462,8 +473,7 @@
                 display: inline-block;
                 margin-bottom: 24px;
 
-                font-size: 37px;
-                font-weight: bold;
+                @include H3;
             }
 
             .desc {
@@ -483,10 +493,10 @@
                         padding: 8px 16px;
 
                         text-align: center;
-                        color: #6F4FF2;
+                        color: $color-purple-000;
                         
                         border-radius: 24px;
-                        border: 1px solid #866AFA;  
+                        border: 1px solid $color-purple-001;  
                 
                         &:last-child {
                             margin-right: 0; // 마지막 버튼은 오른쪽 마진 제거
@@ -505,9 +515,9 @@
                         gap: 10px;
                         
                         text-align: center;
-                        color: #FFFFFF;
+                        color: $color-text-004;
 
-                        background-color: #866AFA;
+                        background-color: $color-purple-001;
 
                         border-radius: 24px;
                         border: none;
@@ -530,7 +540,7 @@
                 padding: 12px;
 
                 border-radius: 15px;
-                border: 1px solid #F1F1F2;
+                border: 1px solid $color-neteral-003;
 
                 &__image {
                     position: relative;
@@ -545,7 +555,7 @@
                         height: 24px;
 
                         border-radius: 50%;
-                        background-color: #FFFFFF;
+                        background-color: $color-text-004;
 
                         position: absolute; /* 가장 가까운 relative를 기준으로 position이 잡히게 됨 */
                         left: 8px;
@@ -561,9 +571,9 @@
                         padding: 4px 0;
 
                         border-radius: 24px;
-                        background-color: #FFFFFF;
+                        background-color: $color-text-004;
 
-                        font-size: 12px;
+                        @include Caption;
 
                         position: absolute;
                         right: 8px;
@@ -596,14 +606,14 @@
                 &__desc {
 
                     &__title {
-                        font-size: 21px;
-                        font-weight: bold;
-                        color: #6F4FF2;
+                        @include H5;
+                        color: $color-purple-000;
                         
                         display: inline-block;
                         margin-bottom: 12px;
                         
                         /* 문장이 길어질 때 사용 */
+                        width: 100%;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis; // 글자가 넘어가면 말줄임(...) 표시
@@ -612,7 +622,7 @@
                     &__users {
                         display: flex;
                         align-items: center;
-                        border-bottom: 1px solid #D3D4D6;
+                        border-bottom: 1px solid $color-neteral-002;
                         padding-bottom: 10px;
 
                         img:nth-child(2) {
@@ -620,7 +630,7 @@
                         }
                         
                         span {
-                            font-size: 12px;
+                            @include Caption;
                             margin-left: 8px;
                         }
 
@@ -635,15 +645,15 @@
 
                         &__currencyContent {
                             .currencyTitle {
-                                font-size: 12px;
-                                color: #717171;
+                                @include Caption;
+                                color: $color-text-003;
                             }
                             .currencyImage {
                                 display: flex;
                                 align-items: center;
                                 .currency {
-                                    font-size: 12px;
-                                    color: #202020;
+                                    @include Caption;
+                                    color: $color-text-001;
                                 }
                             }
                         }
@@ -655,8 +665,8 @@
                             border-radius: 24px;
                             border: none;
 
-                            color:#FFFFFF;
-                            background-color: #866AFA;
+                            color:$color-text-004;
+                            background-color: $color-purple-001;
                         }
                     }
                 }
@@ -679,18 +689,18 @@
 
                     text-align: center;
 
-                    border: 1px solid #6F4FF2;
+                    border: 1px solid $color-purple-000;
                     border-radius: 24px;
 
-                    background-color: #FFFFFF;
-                    color: #6F4FF2;
+                    background-color: $color-text-004;
+                    color: $color-purple-000;
                 }
             }
         }
 
         &__communityBox {
 
-            border: 1px solid grey;
+            border: 1px solid $color-neteral-002;
             border-radius: 24px;
 
             // filter: drop-shadow(0 4px 8px rgba(134, 106, 250, 0.4)); /* 투명도 사용할 때 */
@@ -716,9 +726,8 @@
                 margin-left: 32px;
 
                 span {
-                    font-size: 43px;
-                    color: #6F4FF2;
-                    font-weight: bold;
+                    @include H2;
+                    color: $color-purple-000;
 
                     margin-bottom: 12px;
                 }
@@ -734,8 +743,8 @@
                     border-radius: 8px;
                     border: none;
     
-                    background-color: #F1F1F2;
-                    color: #717171;
+                    background-color: $color-neteral-003;
+                    color: $color-text-003;
 
                     text-indent: 12px;
                 }
@@ -747,8 +756,8 @@
                     border-radius: 8px;
                     border: none;
                     
-                    background-color: #866AFA;
-                    color: #FFFFFF;
+                    background-color: $color-purple-001;
+                    color: $color-text-004;
                 }
             }
         }
@@ -758,7 +767,7 @@
 }
 
 /* 반응형 (태블릿) */
-@media (max-width: 1024px) {    
+@media screen and (max-width: 1024px) {    
     
     .page {
         padding: 0 13.7%;
@@ -771,7 +780,7 @@
                 .wrapper {
                     &__left {
                         &__title {
-                            font-size: 43px;
+                            @include H2;
                         }
                     }
                     &__right {
@@ -792,6 +801,12 @@
 
             /* Featured NFTs UI 부분 */
             &__featuredBox {
+
+                .titleWrapper {
+                    &__more {
+                        display: none;
+                    }
+                }
 
                 .wrapper {
                     width: calc((100% - 48px) / 3);
@@ -823,8 +838,7 @@
                     &__desc {
     
                         .name {
-                            font-size: 16px;
-                            font-weight: 400;
+                            @include Base;
                         }
                     }
                 }
@@ -877,5 +891,255 @@
             }
         }
     }
+}
+
+/* 반응형 (모바일) */
+@media screen and (max-width: 375px) {    
+    .page {
+        padding: 0 7.2%;
+
+        &__contents {
+
+            /* NFTs Intro UI 부분 */
+            &__introBox {
+                height: 367px;
+                margin-bottom: 12px;
+                
+                .wrapper {
+
+                    &__left {
+                        padding: 12px 119px 0 32px;
+                        justify-content: flex-start;
+                        &__title {
+                            @include H5;
+                        }
+                        &__desc {
+                            @include Base2;
+                        }
+                        &__btn {
+                            display: none;
+                        }
+                    }
+
+                    &__right {
+                        &__salesBox {
+                            width: 92px;
+                            height: 112px;
+
+                            top: 9px;
+                            right: 18px;
+                            
+                            span:first-of-type {
+                                @include H5;
+                            }
+
+                            span:nth-of-type(2) {
+                                @include Caption;
+                            }
+                        }
+
+                        &__usersBox {
+                            width: 192px;
+                            height: 57px;
+                            
+                            bottom: 12px;
+                            right: 97px;
+
+                            .leftUsersBox {
+                                img {
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            }
+
+                            .rightUsersBox {
+                                span:first-of-type {
+                                    @include H5;
+                                }
     
+                                span:nth-of-type(2) {
+                                    @include Caption;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__introBoxBtn {
+                display: flex;
+                gap: 12px;
+                width: 100%;
+                margin-bottom: 24px;
+                .discoverBtn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: calc((100% - 12px) / 2);
+                    
+                    padding: 8px 12px;
+
+                    gap: 6px;
+                    
+                    @include Caption;
+                    text-align: center;
+                    color: $color-text-004;
+
+                    background-color: $color-purple-001;
+
+                    border-radius: 24px;
+                    border: none;
+
+                    img {
+                        width: 12px;
+                        height: 12px;
+                    }
+                }
+
+                .createBtn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: calc((100% - 12px) / 2);
+
+                    padding: 8px 12px;
+
+                    gap: 6px;
+                    
+                    @include Caption;
+                    text-align: center;
+                    color: $color-purple-000;
+
+                    background-color: transparent;
+                    
+                    border-radius: 24px;
+                    border: 1px solid $color-purple-000;
+
+                    img {
+                        width: 12px;
+                        height: 12px;
+                    }
+                    
+                }
+            }
+
+            /* Featured NFTs UI 부분 */
+            &__featuredBox {
+                flex-direction: column;
+
+                .titleWrapper {
+                    &__title {
+                        @include H5;
+                    }
+                    &__next {
+                        display: none;
+                    }
+                    &__more {
+                        display: inline;
+                        @include Caption;
+                        color: $color-purple-000;
+                    }
+                }
+
+                .wrapper {
+                    width: 100%;
+                }
+            }
+
+            /* Meet Our Talented Creators UI 부분 */
+            &__creatorsBox {
+                .titleWrapper {
+                    &__title {
+                        @include Base;
+                    }
+                    &__more {
+                        @include Caption;
+                    }
+                }
+
+                .mainWrapper {
+                    flex-wrap: wrap;
+                    .wrapper {
+                        width: calc((100% - 12px) / 2);
+                    }
+                }
+            }
+
+            /* Explore UI 부분 */
+            &__exploreBox {
+                flex-direction: column;
+                .title {
+                    @include Base;
+                    margin-bottom: 12px;
+                }
+                .desc {
+                    @include Base2;
+                }
+                .button {
+                    &__left {
+                        display: none;
+                    }
+                    &__right {
+                        display: flex;
+                        justify-content: flex-end;
+
+                        width: 100%;
+                        button {
+                            padding: 5px 16.5px;
+                        }
+                    }
+                }
+                .wrapper {
+                    width: 100%;
+                }
+                .loadButton {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+
+            /* Join Our Community UI 부분*/
+            &__communityBox {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                padding: 24px;
+
+                .mainImage {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    margin-bottom: 22px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .desc {
+                    margin-left: 0px;
+
+                    span {
+                        @include H5;
+                        padding: 10px;
+                        margin-bottom: 0px;
+                    }
+
+                    p {
+                        @include Base2;
+                        padding: 10px;
+                        margin: 0px;
+                    }
+                }
+            }
+
+        }
+    }
 }

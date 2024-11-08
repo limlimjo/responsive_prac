@@ -26,10 +26,9 @@
             }
 
             &__title {
-                font-size: 28px;
-                font-weight: 600;
+                @include H4;
                 
-                color: $color-purple-550;
+                color: $color-purple-000;
 
                 margin: 10px;
             }
@@ -44,7 +43,7 @@
                 width: 24px;
                 height: 24px;
                 margin-right: 12px;
-                color: #6F4FF2;
+                color: $color-purple-000;
                 position: absolute;
                 margin: 0 10px;
 
@@ -57,8 +56,8 @@
                 border-radius: 8px;
                 border: none;
 
-                background-color: #F1F1F2;
-                color: #717171;
+                background-color: $color-neteral-003;
+                color: $color-text-003;
 
                 text-indent: 46px;
             }
@@ -99,11 +98,11 @@
 
             padding: 6px 10px;
 
-            background-color: #F1F1F2;
-            color: #717171;
+            background-color: $color-neteral-003;
+            color: $color-text-003;
 
             .bellIcon {
-                color: #6F4FF2;
+                color: $color-purple-000;
             }
         }
 
@@ -120,17 +119,17 @@
             border: none;
             border-radius: 50px;
 
-            background-color: #F1F1F2;
-            color: #717171;
+            background-color: $color-neteral-003;
+            color: $color-text-003;
 
             .title {
-                color: #6F4FF2;
+                color: $color-purple-000;
                 margin-left: 24px;
             }
         }
 
         &__userName {
-            color: $color-white-600;
+            color: $color-neteral-004;
             font-weight: 400;
             font-size: 15px;
         }
@@ -142,7 +141,7 @@
 }
 
 /* 반응형 (태블릿) */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .header {
         &__leftBox {
             &__searchBox {
@@ -160,9 +159,27 @@
             width: 44px;
             height: 44px;
 
-            background: #F1F1F2;
+            background: $color-neteral-003;
 
             border-radius: 8px;
+        }
+    }
+}
+
+/* 반응형 (모바일) */
+@media screen and (max-width: 375px) {
+    .header {
+        margin-bottom: 27px;
+        &__leftBox {
+            &__logoBox {
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
+                &__title {
+                    @include H5;
+                }
+            }
         }
     }
 }
