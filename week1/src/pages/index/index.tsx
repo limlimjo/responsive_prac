@@ -124,34 +124,36 @@ const index = () => {
                         </span>
                         <span className={styles.titleWrapper__more}>See All</span>
                     </div>
+                    {/* Card UI 공통 부분 START */}
                     <div className={styles.mainWrapper}>
                     {nftInfo.slice(0, nftInfoVisible).map((item) => (
                         <div className={styles.wrapper} key={item.id}>
                             <div className={styles.wrapper__image}>
                                 <a className={styles.wrapper__image__heartIcon}>
-                                    <img src="src/assets/images/common/icon/image_heart.svg" alt="heart_icon" />
+                                    <img src={item.like ? "src/assets/images/common/icon/image_heart_fill.svg" : "src/assets/images/common/icon/image_heart.svg"} alt="heart_icon" />
                                 </a>
                                 <span className={styles.wrapper__image__clockIcon}>
                                     <img src="src/assets/images/common/icon/image-clock.svg" alt="clock_icon" />
-                                    <span>2h:24m:04s</span>
+                                    <span>{item.time}</span>
                                 </span>
                                 <div className={styles.nftImage}>
-                                    <img src="src/assets/images/featuredNFTs/image_nft.png" alt="NFT" />
+                                    <img src={item.nftImgUrl} alt="NFT" />
                                 </div>
                             </div>
                             <div className={styles.wrapper__desc}>
                                 <span className={styles.wrapper__desc__title}>{item.title}</span>
                                 <div className={styles.wrapper__desc__users}>
-                                    <img src="src/assets/images/featuredNFTs/image_profile1.png" alt="" />
-                                    <img src="src/assets/images/featuredNFTs/image_profile2.png" alt="" />
-                                    <span>@CosmicArtisan , @Sculptor</span>
+                                    {item.creatorProfileUrl.map((creatorProfileUrl, index) => (
+                                        <img key={index} src={creatorProfileUrl} alt="" />
+                                    ))}
+                                    <span>{item.creatorAccount.join(', ')}</span>
                                 </div>
                                 <div className={styles.wrapper__desc__bid}>
                                     <div className={styles.wrapper__desc__bid__currencyContent}>
                                         <span className={styles.currencyTitle}>Current Bid:</span>
                                         <div className={styles.currencyImage}>
                                             <img src="src/assets/images/common/icon/image_currency.svg" alt="" />
-                                            <span className={styles.currency}>1.35 ETH</span>
+                                            <span className={styles.currency}>{item.currentBid} ETH</span>
                                         </div>
                                     </div>
                                     <button>Place a Bid</button>
@@ -160,7 +162,7 @@ const index = () => {
                         </div>
                     ))}
                     </div>
-                    {/* Card UI 공통 부분 */}
+                    {/* Card UI 공통 부분 END */}
                 </div>
                 {/* Meet Our Talented Creators UI 부분 */}
                 <div className={styles.page__contents__creatorsBox}>
@@ -173,10 +175,10 @@ const index = () => {
                         <div className={styles.wrapper}>
                             <div className={styles.wrapper__rank}>{item.rank}</div>
                             <div className={styles.wrapper__desc}>
-                                <img src="src/assets/images/creators/image_creator.png" alt="image_creator" />
+                                <img src={item.creatorProfileUrl} alt="image_creator" />
                                 <span className={styles.name}>{item.creator}</span>
-                                <span className={styles.account}>@Sculptor</span>
-                                <span className={styles.items}>890 items</span>
+                                <span className={styles.account}>{item.creatorAccount}</span>
+                                <span className={styles.items}>{item.itemCount} items</span>
                             </div>
                         </div>
                     ))}
@@ -204,34 +206,36 @@ const index = () => {
                             </button>
                         </div>
                     </div>
+                    {/* Card UI 공통 부분 START */}
                     <div className={styles.mainWrapper}>
                     {exploreInfo.slice(0, exploreInfoVisible).map((item) => (
                         <div className={styles.wrapper} key={item.id}>
                             <div className={styles.wrapper__image}>
                                 <a className={styles.wrapper__image__heartIcon}>
-                                    <img src="src/assets/images/common/icon/image_heart.svg" alt="heart_icon" />
+                                    <img src={item.like ? "src/assets/images/common/icon/image_heart_fill.svg" : "src/assets/images/common/icon/image_heart.svg"} alt="heart_icon" />
                                 </a>
                                 <span className={styles.wrapper__image__clockIcon}>
                                     <img src="src/assets/images/common/icon/image-clock.svg" alt="clock_icon" />
-                                    <span>2h:24m:04s</span>
+                                    <span>{item.time}</span>
                                 </span>
                                 <div className={styles.nftImage}>
-                                    <img src="src/assets/images/featuredNFTs/image_nft.png" alt="NFT" />
+                                    <img src={item.nftImgUrl} alt="NFT" />
                                 </div>
                             </div>
                             <div className={styles.wrapper__desc}>
                                 <span className={styles.wrapper__desc__title}>{item.title}</span>
                                 <div className={styles.wrapper__desc__users}>
-                                    <img src="src/assets/images/featuredNFTs/image_profile1.png" alt="" />
-                                    <img src="src/assets/images/featuredNFTs/image_profile2.png" alt="" />
-                                    <span>@CosmicArtisan , @Sculptor</span>
+                                    {item.creatorProfileUrl.map((creatorProfileUrl, index) => (
+                                        <img key={index} src={creatorProfileUrl} alt="" />
+                                    ))}
+                                    <span>{item.creatorAccount.join(', ')}</span>
                                 </div>
                                 <div className={styles.wrapper__desc__bid}>
                                     <div className={styles.wrapper__desc__bid__currencyContent}>
                                         <span className={styles.currencyTitle}>Current Bid:</span>
                                         <div className={styles.currencyImage}>
                                             <img src="src/assets/images/common/icon/image_currency.svg" alt="" />
-                                            <span className={styles.currency}>1.35 ETH</span>
+                                            <span className={styles.currency}>{item.currentBid} ETH</span>
                                         </div>
                                     </div>
                                     <button>Place a Bid</button>
@@ -240,7 +244,7 @@ const index = () => {
                         </div>
                     ))}
                     </div>
-                    {/* Card UI 공통 부분 */}
+                    {/* Card UI 공통 부분 END */}
                     <div className={styles.loadButton}>
                         <button>
                             <span>Load more</span>

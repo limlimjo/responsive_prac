@@ -275,8 +275,6 @@
                         justify-content: center;
                         width: 98px;
 
-                        padding: 4px 0;
-
                         border-radius: 24px;
                         background-color: $color-text-004;
 
@@ -288,6 +286,9 @@
 
                         img {
                             margin-right: 6px;
+                        }
+                        span {
+                            color: $color-purple-000;
                         }
                     }
 
@@ -567,9 +568,7 @@
                         align-items: center;
                         justify-content: center;
                         width: 98px;
-
-                        padding: 4px 0;
-
+                        
                         border-radius: 24px;
                         background-color: $color-text-004;
 
