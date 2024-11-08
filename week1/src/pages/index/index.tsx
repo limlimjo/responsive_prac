@@ -235,7 +235,9 @@ const index = () => {
                 </div>
                 {/* Join Our Community 부분 */}
                 <div className={styles.page__contents__communityBox}>
-                    <img src="src/assets/images/community/image_community.png" alt="image_community" />
+                    <div className={styles.mainImage}>
+                        <img src="src/assets/images/community/image_community.png" alt="image_community" />
+                    </div>
                     <div className={styles.desc}>
                         <span>Join Our Community</span>
                         <p>Lorem ipsum dolor sit amet consectetur. laculis vestibulum purus facilisi ultrices sed faucibus proin cum ut. Lorem ipsum dolor sit amet consectetur. laculis vestibulum purus facilisi ultrices sed faucibus proin cum ut.</p>
