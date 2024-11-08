@@ -1,0 +1,900 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: 100vh;
+
+    padding: 0 7.3%;
+
+    &__contents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
+
+        &__introBox {
+            width: 100%;
+            
+            position: relative;
+
+            margin-bottom: 64px;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                border-radius: 24px;
+            }
+
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                &__left {
+                    height: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-left: 48px;
+
+                    &__title {
+                        margin-bottom: 4px;
+
+                        color: $color-white-000;
+                        font-size: 3rem;
+                        font-weight: 700;
+                    }
+
+                    &__desc {
+                        color: $color-white-000;
+                        margin-bottom: 32px;
+                    }
+
+                    &__btn {
+                        display: flex;
+                        .discoverBtn {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            
+                            margin-right: 24px;
+                            padding: 10px 24px;
+    
+                            gap: 10px;
+                            
+                            text-align: center;
+                            color: #FFFFFF;
+    
+                            background-color: #866AFA;
+    
+                            border-radius: 24px;
+                            border: none;
+
+                            img {
+                                width: 24px;
+                                height: 24px;
+                            }
+                        }
+
+                        .createBtn {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+    
+                            padding: 10px 24px;
+    
+                            gap: 10px;
+                            
+                            text-align: center;
+                            color: #FFFFFF;
+    
+                            background-color: transparent;
+                            
+                            border-radius: 24px;
+                            border: 1px solid #FFFFFF;
+
+                            img {
+                                width: 24px;
+                                height: 24px;
+                            }
+                            
+                        }
+                    }
+                }
+
+                &__right {
+                    display: flex;
+                    align-items: start;
+
+                    position: relative;
+
+                    &__salesBox {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        width: 161px;
+                        height: 161px;
+
+                        border-radius: 15px;
+
+                        background-color: rgba(103, 105, 111, 50%);
+                        backdrop-filter: blur(6px);
+
+                        position: absolute;
+
+                        top: 59px;
+                        right: 143px;
+
+                        img {
+                            width: 48px;
+                            height: 48px;
+                        }
+                        
+                        span {
+                            color: #FFFFFF;
+                        }
+                        span:first-of-type {
+                            font-size: 28px;
+                        }
+                    }
+
+                    &__usersBox {
+                        display: flex;
+                        align-items: center;
+
+                        width: 282px;
+                        height: 90px;
+
+                        border-radius: 50px;
+                        
+                        background-color: rgba(103, 105, 111, 50%);
+                        backdrop-filter: blur(6px);
+
+                        position: absolute;
+
+                        bottom: 95px;
+                        right: 233px;
+
+                        span {
+                            color: #FFFFFF;
+                        }
+                        span:first-of-type {
+                            font-size: 28px;
+                        }
+
+                        .leftUsersBox {
+                            display: flex;
+                            justify-content: center;
+                            width: 50%;
+
+                            img {
+                                width: 44px;
+                                height: 44px;
+                                
+                                &:nth-child(2), &:nth-child(3) {
+                                    margin-left: -15px;
+                                }
+                            }
+                        }
+
+                        .rightUsersBox {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__featuredBox {
+
+            width: 100%;
+            
+            margin-bottom: 64px;
+
+            .titleWrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 27px;
+
+                &__title {
+                    display: inline-block;
+                    font-size: 37px;
+                    color: #6F4FF2;
+                    font-weight: bold;
+                }
+
+                &__next {
+                    color: #6F4FF2;
+                }
+            }
+
+            .mainWrapper {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 24px;
+            }
+
+            .wrapper {
+
+                width: calc((100% - 96px) / 5);
+
+                padding: 12px;
+
+                border-radius: 15px;
+                border: 1px solid #F1F1F2;
+
+                &__image {
+                    position: relative;
+
+                    margin-bottom: 10px;
+
+                    &__heartIcon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 24px;
+                        height: 24px;
+
+                        border-radius: 50%;
+                        background-color: #FFFFFF;
+
+                        position: absolute; /* 가장 가까운 relative를 기준으로 position이 잡히게 됨 */
+                        left: 8px;
+                        top: 10px;
+                    }
+
+                    &__clockIcon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 98px;
+
+                        padding: 4px 0;
+
+                        border-radius: 24px;
+                        background-color: #FFFFFF;
+
+                        font-size: 12px;
+
+                        position: absolute;
+                        right: 8px;
+                        top: 10px;
+
+                        img {
+                            margin-right: 6px;
+                        }
+                    }
+
+                    .nftImage {
+                        width: 100%;
+                        height: 210px;
+                        
+                        border-radius: 10px;
+    
+                        object-fit: contain; /* 이미지 비율 유지하면서 잘림 */
+                        display: block; /* 이미지 아래 여백 없애기 위해 block으로 설정 */
+                        overflow: hidden;
+                        margin: 0 auto;
+                        
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                &__desc {
+
+                    &__title {
+                        font-size: 21px;
+                        font-weight: bold;
+                        color: #6F4FF2;
+                        
+                        display: inline-block;
+                        margin-bottom: 12px;
+
+                        /* 문장이 길어질 때 사용 */
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis; // 글자가 넘어가면 말줄임(...) 표시
+                    }
+
+                    &__users {
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 1px solid #D3D4D6;
+                        padding-bottom: 10px;
+
+                        img:nth-child(2) {
+                            margin-left: -5%;
+                        }
+                        
+                        span {
+                            font-size: 12px;
+                            margin-left: 8px;
+                        }
+
+                    }
+
+                    &__bid {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        margin-top: 10px;
+
+                        &__currencyContent {
+                            .currencyTitle {
+                                font-size: 12px;
+                                color: #717171;
+                            }
+                            .currencyImage {
+                                display: flex;
+                                align-items: center;
+                                .currency {
+                                    font-size: 12px;
+                                    color: #202020;
+                                }
+                            }
+                        }
+
+                        button {
+                            width: 86px;
+                            height: 29px;
+
+                            border-radius: 24px;
+                            border: none;
+
+                            color:#FFFFFF;
+                            background-color: #866AFA;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__creatorsBox {
+            width: 100%;
+
+            margin-bottom: 64px;
+
+            .titleWrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                margin-bottom: 43px;
+                &__title {
+                    display: inline-block;
+                    font-size: 37px;
+                    font-weight: bold;
+                }
+                &__more {
+                    color: #6F4FF2;
+                }
+            }
+
+            .mainWrapper {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .wrapper {
+                width: calc((100% - 90px) / 7);
+
+                &__rank {
+                    width: 24px;
+                    height: 24px;
+
+                    border-radius: 50%;
+
+                    display: flex;
+                    justify-content: center;
+
+                    margin: 0 auto;
+                    margin-bottom: -10px;
+
+                    background-color: #B6A5FE;
+                    color: #FFFFFF;
+
+                    position: relative;
+                    z-index: 2;
+                }
+
+                &__desc {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    border: 1px solid #D3D4D6;
+                    border-radius: 12px;
+
+                    padding: 16px 0;
+
+                    gap: 4px;
+
+                    .name {
+                        font-size: 21px;
+                        font-weight: bold;
+                    }
+
+                    .account {
+                        font-size: 12px;
+                    }
+
+                    .items {
+                        font-size: 12px;
+                        color: #6F4FF2;
+                    }
+                }
+            }
+        }
+
+        &__exploreBox {
+
+            width: 100%;
+
+            margin-bottom: 64px;
+
+            .title {
+                display: inline-block;
+                margin-bottom: 24px;
+
+                font-size: 37px;
+                font-weight: bold;
+            }
+
+            .desc {
+                margin-bottom: 24px;
+                
+            }
+
+            .button {
+                display: flex;
+                justify-content: space-between;
+
+                margin-bottom: 24px;
+
+                &__left {              
+                    button {
+                        margin-right: 12px;
+                        padding: 8px 16px;
+
+                        text-align: center;
+                        color: #6F4FF2;
+                        
+                        border-radius: 24px;
+                        border: 1px solid #866AFA;  
+                
+                        &:last-child {
+                            margin-right: 0; // 마지막 버튼은 오른쪽 마진 제거
+                        }
+                    }
+                }
+
+                &__right {
+                    button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        padding: 10px 24px;
+
+                        gap: 10px;
+                        
+                        text-align: center;
+                        color: #FFFFFF;
+
+                        background-color: #866AFA;
+
+                        border-radius: 24px;
+                        border: none;
+                    }
+                }
+            }
+
+            .mainWrapper {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 24px;
+                margin-bottom: 32px;
+
+            }
+
+            .wrapper {
+
+                width: calc((100% - 96px) / 5);
+
+                padding: 12px;
+
+                border-radius: 15px;
+                border: 1px solid #F1F1F2;
+
+                &__image {
+                    position: relative;
+
+                    margin-bottom: 10px;
+
+                    &__heartIcon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 24px;
+                        height: 24px;
+
+                        border-radius: 50%;
+                        background-color: #FFFFFF;
+
+                        position: absolute; /* 가장 가까운 relative를 기준으로 position이 잡히게 됨 */
+                        left: 8px;
+                        top: 10px;
+                    }
+
+                    &__clockIcon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 98px;
+
+                        padding: 4px 0;
+
+                        border-radius: 24px;
+                        background-color: #FFFFFF;
+
+                        font-size: 12px;
+
+                        position: absolute;
+                        right: 8px;
+                        top: 10px;
+
+                        img {
+                            margin-right: 6px;
+                        }
+                    }
+
+                    .nftImage {
+                        width: 100%;
+                        height: 210px;
+                        
+                        border-radius: 10px;
+    
+                        object-fit: contain; /* 이미지 비율 유지하면서 잘림 */
+                        display: block; /* 이미지 아래 여백 없애기 위해 block으로 설정 */
+                        overflow: hidden;
+                        margin: 0 auto;
+                        
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                &__desc {
+
+                    &__title {
+                        font-size: 21px;
+                        font-weight: bold;
+                        color: #6F4FF2;
+                        
+                        display: inline-block;
+                        margin-bottom: 12px;
+                        
+                        /* 문장이 길어질 때 사용 */
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis; // 글자가 넘어가면 말줄임(...) 표시
+                    }
+
+                    &__users {
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 1px solid #D3D4D6;
+                        padding-bottom: 10px;
+
+                        img:nth-child(2) {
+                            margin-left: -5%;
+                        }
+                        
+                        span {
+                            font-size: 12px;
+                            margin-left: 8px;
+                        }
+
+                    }
+
+                    &__bid {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        margin-top: 10px;
+
+                        &__currencyContent {
+                            .currencyTitle {
+                                font-size: 12px;
+                                color: #717171;
+                            }
+                            .currencyImage {
+                                display: flex;
+                                align-items: center;
+                                .currency {
+                                    font-size: 12px;
+                                    color: #202020;
+                                }
+                            }
+                        }
+
+                        button {
+                            width: 86px;
+                            height: 29px;
+
+                            border-radius: 24px;
+                            border: none;
+
+                            color:#FFFFFF;
+                            background-color: #866AFA;
+                        }
+                    }
+                }
+                
+            }
+            
+            .loadButton {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    padding: 10px 24px;
+
+                    gap: 10px;
+
+                    text-align: center;
+
+                    border: 1px solid #6F4FF2;
+                    border-radius: 24px;
+
+                    background-color: #FFFFFF;
+                    color: #6F4FF2;
+                }
+            }
+        }
+
+        &__communityBox {
+
+            border: 1px solid grey;
+            border-radius: 24px;
+
+            // filter: drop-shadow(0 4px 8px rgba(134, 106, 250, 0.4)); /* 투명도 사용할 때 */
+
+            padding: 68px;
+
+            margin-bottom: 64px;
+
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 325px;
+                height: 282px;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+
+            .desc {
+                display: flex;
+                flex-direction: column;
+
+                margin-left: 32px;
+
+                span {
+                    font-size: 43px;
+                    color: #6F4FF2;
+                    font-weight: bold;
+
+                    margin-bottom: 12px;
+                }
+
+                p {
+                    margin: 0 0 12px 10px;
+                }
+
+                .emailInput {
+                    width: 288px;
+                    height: 44px;
+                    
+                    border-radius: 8px;
+                    border: none;
+    
+                    background-color: #F1F1F2;
+                    color: #717171;
+
+                    text-indent: 12px;
+                }
+
+                button {
+                    width: 120px;
+                    height: 44px;
+
+                    border-radius: 8px;
+                    border: none;
+                    
+                    background-color: #866AFA;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+    }
+
+}
+
+/* 반응형 (태블릿) */
+@media (max-width: 1024px) {    
+    
+    .page {
+        padding: 0 13.7%;
+        &__contents {
+
+            /* NFTs Intro UI 부분 */
+            &__introBox {
+                height: 533px;
+
+                .wrapper {
+                    &__left {
+                        &__title {
+                            font-size: 43px;
+                        }
+                    }
+                    &__right {
+                        &__salesBox {
+                            top: 341px;
+                            right: 51px;
+
+                        }
+                        &__usersBox {
+                            width: 254px;
+                            bottom: -36px;
+                            right: 416px;
+                        }
+                    }
+                }
+
+            }
+
+            /* Featured NFTs UI 부분 */
+            &__featuredBox {
+
+                .mainWrapper {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    overflow: hidden;
+                    width: 100%;
+                }
+
+                .wrapper {
+                    width: calc((100% - 48px) / 3);
+                    flex-shrink: 0;
+
+                    .nftImage {
+                        width: 100%;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;  /* 이미지 비율을 유지하면서 div에 맞게 조정 */
+                        }
+                    }
+                }
+            }
+
+            /* Meet Our Talented Creators UI 부분 */
+            &__creatorsBox {
+
+                .mainWrapper {
+                    flex-wrap: nowrap;
+                    overflow: hidden;
+
+                    gap: 12px;
+                }
+
+                .wrapper {
+                    width: calc((100% - 48px) / 5);
+                    flex-shrink: 0;
+
+                    &__desc {
+    
+                        .name {
+                            font-size: 16px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+
+            /* Explore UI 부분 */
+            &__exploreBox {
+
+                .mainWrapper {
+                    display: flex;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 790px;
+                    
+                }
+
+                .wrapper {
+                    width: calc((100% - 48px) / 3);
+                    flex-shrink: 0;
+
+                    .nftImage {
+                        width: 100%;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;  /* 이미지 비율을 유지하면서 div에 맞게 조정 */
+                        }
+                    }
+                }
+            }
+            
+            /* Join Our Community UI 부분*/
+            &__communityBox {
+                padding: 48px;
+
+                img {
+                    height: 420px;
+                }
+
+                span {
+                    line-height: 125%;
+                }
+                .desc {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+                    .emailCont {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+                        .emailInput, button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
