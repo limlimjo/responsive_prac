@@ -33,7 +33,7 @@ export const nftData = [
         currentBid: '2.05',
         like: true,
         time: '2h:24m:04s',
-        category: 'Art'
+        category: 'Photography'
     },
     {
         id: 4,
@@ -44,7 +44,7 @@ export const nftData = [
         currentBid: '1.87',
         like: false,
         time: '2h:24m:04s',
-        category: 'Art'
+        category: 'Virtual worlds'
     },
     {
         id: 5,
@@ -55,7 +55,7 @@ export const nftData = [
         currentBid: '2.32',
         like: false,
         time: '2h:24m:04s',
-        category: 'Art'
+        category: 'Game'
     },
     {
         id: 6,
@@ -66,7 +66,7 @@ export const nftData = [
         currentBid: '1.35',
         like: false,
         time: '2h:24m:04s',
-        category: 'Art'
+        category: 'Game'
     },
     {
         id: 7,
@@ -77,7 +77,7 @@ export const nftData = [
         currentBid: '1.86',
         like: false,
         time: '2h:24m:04s',
-        category: 'Art'
+        category: 'Photography'
     },
     {
         id: 8,
@@ -110,7 +110,7 @@ export const nftData = [
         currentBid: '2.32',
         like: false,
         time: '2h:24m:04s',
-        category: 'Art'
+        category: 'Virtual worlds'
     }
 ];
 

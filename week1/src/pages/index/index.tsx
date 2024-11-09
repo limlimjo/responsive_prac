@@ -50,9 +50,17 @@ const index = () => {
         };
     }, []);
 
-    // const handleClick = () => {
-    //     alert('버튼이 클릭되었습니다!');
-    // };
+    const [activeCategory, setActiveCategory] = useState("All categories");
+
+    const handleBtnClick = (category) => {
+        setActiveCategory(category);
+    };
+
+    // 선택된 카테고리에 따른 데이터 필터링
+    const filteredData = 
+        activeCategory === "All categories"
+            ? exploreInfo
+            : exploreInfo.filter((item) => item.category === activeCategory);
 
     return (
         <div className={styles.page}>
@@ -193,11 +201,21 @@ const index = () => {
                     </p>
                     <div className={styles.button}>
                         <div className={styles.button__left}>
-                            <button>All categories</button>
-                            <button>Art</button>
-                            <button>Photography</button>
-                            <button>Virtual worlds</button>
-                            <button>Game</button>
+                            {["All categories", "Art", "Photography", "Virtual worlds", "Game"].map(
+                                (category) => (
+                                    <button
+                                        key={category}
+                                        onClick={() => handleBtnClick(category)}
+                                        className={
+                                            activeCategory === category
+                                                ? styles.activeButton
+                                                : styles.inactiveButton
+                                        }
+                                    >
+                                        {category}
+                                    </button>
+                                )
+                            )}
                         </div>
                         <div className={styles.button__right}>
                             <button>
@@ -208,7 +226,7 @@ const index = () => {
                     </div>
                     {/* Card UI 공통 부분 START */}
                     <div className={styles.mainWrapper}>
-                    {exploreInfo.slice(0, exploreInfoVisible).map((item) => (
+                    {filteredData.slice(0, exploreInfoVisible).map((item) => (
                         <div className={styles.wrapper} key={item.id}>
                             <div className={styles.wrapper__image}>
                                 <a className={styles.wrapper__image__heartIcon}>
