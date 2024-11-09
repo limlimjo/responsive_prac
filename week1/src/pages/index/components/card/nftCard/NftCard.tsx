@@ -1,6 +1,6 @@
-import styles from './Card.module.scss'
+import styles from './NftCard.module.scss'
 
-const Card = ({
+const NftCard = ({
   nftImgUrl,
   like,
   time,
@@ -46,4 +46,4 @@ const Card = ({
   )
 }
 
-export default Card
+export default NftCard

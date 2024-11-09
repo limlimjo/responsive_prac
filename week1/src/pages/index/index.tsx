@@ -4,7 +4,7 @@ import CommonFooter from '@/components/common/footer/CommonFooter'
 
 import { nftData, creatorData } from '../../data/dummyData';
 import { useEffect, useState } from 'react';
-import Card from './components/Card';
+import NftCard from './components/card/nftCard/NftCard';
 
 const index = () => {
 
@@ -136,7 +136,7 @@ const index = () => {
                     {/* Card UI 공통 부분 START */}
                     <div className={styles.mainWrapper}>
                     {nftInfo.slice(0, nftInfoVisible).map((item) => (
-                        <Card 
+                        <NftCard 
                             key={item.id}
                             nftImgUrl={item.nftImgUrl}
                             like={item.like}
@@ -205,7 +205,7 @@ const index = () => {
                     {/* Card UI 공통 부분 START */}
                     <div className={styles.mainWrapper}>
                     {filteredData.slice(0, exploreInfoVisible).map((item) => (
-                        <Card 
+                        <NftCard 
                             key={item.id}
                             nftImgUrl={item.nftImgUrl}
                             like={item.like}
