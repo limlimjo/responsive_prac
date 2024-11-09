@@ -5,6 +5,7 @@ import CommonFooter from '@/components/common/footer/CommonFooter'
 import { nftData, creatorData } from '../../data/dummyData';
 import { useEffect, useState } from 'react';
 import NftCard from './components/card/nftCard/NftCard';
+import CreatorCard from './components/card/creatorCard/CreatorCard';
 
 const index = () => {
 
@@ -158,15 +159,14 @@ const index = () => {
                     </div>
                     <div className={styles.mainWrapper}>
                     {creatorInfo.slice(0, creatorInfoVisible).map((item) => (
-                        <div className={styles.wrapper}>
-                            <div className={styles.wrapper__rank}>{item.rank}</div>
-                            <div className={styles.wrapper__desc}>
-                                <img src={item.creatorProfileUrl} alt="image_creator" />
-                                <span className={styles.name}>{item.creator}</span>
-                                <span className={styles.account}>{item.creatorAccount}</span>
-                                <span className={styles.items}>{item.itemCount} items</span>
-                            </div>
-                        </div>
+                        <CreatorCard
+                            key={item.id}
+                            rank={item.rank}
+                            creatorProfileUrl={item.creatorProfileUrl}
+                            creator={item.creator}
+                            creatorAccount={item.creatorAccount}
+                            itemCount={item.itemCount}
+                        />
                     ))}
                     </div>
                 </div>

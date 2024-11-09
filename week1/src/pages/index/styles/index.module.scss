@@ -265,63 +265,6 @@
                 display: flex;
                 gap: 15px;
             }
-
-            .wrapper {
-                width: calc((100% - 90px) / 7);
-
-                &__rank {
-                    width: 24px;
-                    height: 24px;
-
-                    border-radius: 50%;
-
-                    display: flex;
-                    justify-content: center;
-
-                    margin: 0 auto;
-                    margin-bottom: -10px;
-
-                    background-color: $color-purple-003;
-                    color: $color-text-004;
-
-                    position: relative;
-                    z-index: 2;
-                }
-
-                &__desc {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-
-                    border: 1px solid $color-neteral-002;
-                    border-radius: 12px;
-
-                    padding: 16px 0;
-
-                    gap: 4px;
-
-                    .name {
-                        @include H5;
-                        text-align: center;
-
-                        /* 문장이 길어질 때 사용 */
-                        width: 100%;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis; // 글자가 넘어가면 말줄임(...) 표시
-                    }
-
-                    .account {
-                        @include Caption;
-                    }
-
-                    .items {
-                        @include Caption;
-                        color: $color-purple-000;
-                    }
-                }
-            }
         }
 
         &__exploreBox {
@@ -543,18 +486,6 @@
                 .mainWrapper {
                     gap: 12px;
                 }
-
-                .wrapper {
-                    width: calc((100% - 48px) / 5);
-                    flex-shrink: 0;
-
-                    &__desc {
-    
-                        .name {
-                            @include Base;
-                        }
-                    }
-                }
             }
 
             /* Explore UI 부분 */
@@ -753,9 +684,6 @@
 
                 .mainWrapper {
                     flex-wrap: wrap;
-                    .wrapper {
-                        width: calc((100% - 12px) / 2);
-                    }
                 }
             }
 
