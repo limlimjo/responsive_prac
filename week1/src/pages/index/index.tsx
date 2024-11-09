@@ -4,6 +4,7 @@ import CommonFooter from '@/components/common/footer/CommonFooter'
 
 import { nftData, creatorData } from '../../data/dummyData';
 import { useEffect, useState } from 'react';
+import Card from './components/Card';
 
 const index = () => {
 
@@ -135,39 +136,16 @@ const index = () => {
                     {/* Card UI 공통 부분 START */}
                     <div className={styles.mainWrapper}>
                     {nftInfo.slice(0, nftInfoVisible).map((item) => (
-                        <div className={styles.wrapper} key={item.id}>
-                            <div className={styles.wrapper__image}>
-                                <a className={styles.wrapper__image__heartIcon}>
-                                    <img src={item.like ? "src/assets/images/common/icon/image_heart_fill.svg" : "src/assets/images/common/icon/image_heart.svg"} alt="heart_icon" />
-                                </a>
-                                <span className={styles.wrapper__image__clockIcon}>
-                                    <img src="src/assets/images/common/icon/image-clock.svg" alt="clock_icon" />
-                                    <span>{item.time}</span>
-                                </span>
-                                <div className={styles.nftImage}>
-                                    <img src={item.nftImgUrl} alt="NFT" />
-                                </div>
-                            </div>
-                            <div className={styles.wrapper__desc}>
-                                <span className={styles.wrapper__desc__title}>{item.title}</span>
-                                <div className={styles.wrapper__desc__users}>
-                                    {item.creatorProfileUrl.map((creatorProfileUrl, index) => (
-                                        <img key={index} src={creatorProfileUrl} alt="" />
-                                    ))}
-                                    <span>{item.creatorAccount.join(', ')}</span>
-                                </div>
-                                <div className={styles.wrapper__desc__bid}>
-                                    <div className={styles.wrapper__desc__bid__currencyContent}>
-                                        <span className={styles.currencyTitle}>Current Bid:</span>
-                                        <div className={styles.currencyImage}>
-                                            <img src="src/assets/images/common/icon/image_currency.svg" alt="" />
-                                            <span className={styles.currency}>{item.currentBid} ETH</span>
-                                        </div>
-                                    </div>
-                                    <button>Place a Bid</button>
-                                </div>
-                            </div>
-                        </div>
+                        <Card 
+                            key={item.id}
+                            nftImgUrl={item.nftImgUrl}
+                            like={item.like}
+                            time={item.time}
+                            title={item.title}
+                            creatorProfileUrl={item.creatorProfileUrl}
+                            creatorAccount={item.creatorAccount}
+                            currentBid={item.currentBid}
+                        />
                     ))}
                     </div>
                     {/* Card UI 공통 부분 END */}
@@ -227,39 +205,16 @@ const index = () => {
                     {/* Card UI 공통 부분 START */}
                     <div className={styles.mainWrapper}>
                     {filteredData.slice(0, exploreInfoVisible).map((item) => (
-                        <div className={styles.wrapper} key={item.id}>
-                            <div className={styles.wrapper__image}>
-                                <a className={styles.wrapper__image__heartIcon}>
-                                    <img src={item.like ? "src/assets/images/common/icon/image_heart_fill.svg" : "src/assets/images/common/icon/image_heart.svg"} alt="heart_icon" />
-                                </a>
-                                <span className={styles.wrapper__image__clockIcon}>
-                                    <img src="src/assets/images/common/icon/image-clock.svg" alt="clock_icon" />
-                                    <span>{item.time}</span>
-                                </span>
-                                <div className={styles.nftImage}>
-                                    <img src={item.nftImgUrl} alt="NFT" />
-                                </div>
-                            </div>
-                            <div className={styles.wrapper__desc}>
-                                <span className={styles.wrapper__desc__title}>{item.title}</span>
-                                <div className={styles.wrapper__desc__users}>
-                                    {item.creatorProfileUrl.map((creatorProfileUrl, index) => (
-                                        <img key={index} src={creatorProfileUrl} alt="" />
-                                    ))}
-                                    <span>{item.creatorAccount.join(', ')}</span>
-                                </div>
-                                <div className={styles.wrapper__desc__bid}>
-                                    <div className={styles.wrapper__desc__bid__currencyContent}>
-                                        <span className={styles.currencyTitle}>Current Bid:</span>
-                                        <div className={styles.currencyImage}>
-                                            <img src="src/assets/images/common/icon/image_currency.svg" alt="" />
-                                            <span className={styles.currency}>{item.currentBid} ETH</span>
-                                        </div>
-                                    </div>
-                                    <button>Place a Bid</button>
-                                </div>
-                            </div>
-                        </div>
+                        <Card 
+                            key={item.id}
+                            nftImgUrl={item.nftImgUrl}
+                            like={item.like}
+                            time={item.time}
+                            title={item.title}
+                            creatorProfileUrl={item.creatorProfileUrl}
+                            creatorAccount={item.creatorAccount}
+                            currentBid={item.currentBid}
+                        />
                     ))}
                     </div>
                     {/* Card UI 공통 부분 END */}

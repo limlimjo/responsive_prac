@@ -239,146 +239,6 @@
                 flex-wrap: wrap;
                 gap: 24px;
             }
-
-            .wrapper {
-
-                width: calc((100% - 96px) / 5);
-
-                padding: 12px;
-
-                border-radius: 15px;
-                border: 1px solid $color-neteral-003;
-
-                &__image {
-                    position: relative;
-
-                    margin-bottom: 10px;
-
-                    &__heartIcon {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 24px;
-                        height: 24px;
-
-                        border-radius: 50%;
-                        background-color: $color-text-004;
-
-                        position: absolute; /* 가장 가까운 relative를 기준으로 position이 잡히게 됨 */
-                        left: 8px;
-                        top: 10px;
-                    }
-
-                    &__clockIcon {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 98px;
-
-                        border-radius: 24px;
-                        background-color: $color-text-004;
-
-                        @include Caption;
-
-                        position: absolute;
-                        right: 8px;
-                        top: 10px;
-
-                        img {
-                            margin-right: 6px;
-                        }
-                        span {
-                            color: $color-purple-000;
-                        }
-                    }
-
-                    .nftImage {
-                        width: 100%;
-                        height: 210px;
-                        
-                        border-radius: 10px;
-    
-                        object-fit: contain; /* 이미지 비율 유지하면서 잘림 */
-                        display: block; /* 이미지 아래 여백 없애기 위해 block으로 설정 */
-                        overflow: hidden;
-                        margin: 0 auto;
-                        
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                }
-
-                &__desc {
-
-                    &__title {
-                        @include H5;
-                        color: $color-purple-000;
-                        
-                        display: inline-block;
-                        margin-bottom: 12px;
-
-                        /* 문장이 길어질 때 사용 */
-                        width: 100%;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis; // 글자가 넘어가면 말줄임(...) 표시
-                    }
-
-                    &__users {
-                        display: flex;
-                        align-items: center;
-                        border-bottom: 1px solid $color-neteral-002;
-                        padding-bottom: 10px;
-
-                        img:nth-child(2) {
-                            margin-left: -5%;
-                        }
-                        
-                        span {
-                            @include Caption;
-                            margin-left: 8px;
-                        }
-
-                    }
-
-                    &__bid {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-
-                        margin-top: 10px;
-
-                        &__currencyContent {
-                            .currencyTitle {
-                                @include Caption;
-                                color: $color-text-003;
-                            }
-                            .currencyImage {
-                                display: flex;
-                                align-items: center;
-                                .currency {
-                                    @include Caption;
-                                    color: $color-text-001;
-                                }
-                            }
-                        }
-
-                        button {
-                            width: 86px;
-                            height: 29px;
-
-                            border-radius: 24px;
-                            border: none;
-
-                            color:$color-text-004;
-                            background-color: $color-purple-001;
-                        }
-                    }
-                }
-            }
         }
 
         &__creatorsBox {
@@ -540,144 +400,6 @@
                 margin-bottom: 32px;
 
             }
-
-            .wrapper {
-
-                width: calc((100% - 96px) / 5);
-
-                padding: 12px;
-
-                border-radius: 15px;
-                border: 1px solid $color-neteral-003;
-
-                &__image {
-                    position: relative;
-
-                    margin-bottom: 10px;
-
-                    &__heartIcon {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 24px;
-                        height: 24px;
-
-                        border-radius: 50%;
-                        background-color: $color-text-004;
-
-                        position: absolute; /* 가장 가까운 relative를 기준으로 position이 잡히게 됨 */
-                        left: 8px;
-                        top: 10px;
-                    }
-
-                    &__clockIcon {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 98px;
-
-                        border-radius: 24px;
-                        background-color: $color-text-004;
-
-                        @include Caption;
-
-                        position: absolute;
-                        right: 8px;
-                        top: 10px;
-
-                        img {
-                            margin-right: 6px;
-                        }
-                    }
-
-                    .nftImage {
-                        width: 100%;
-                        height: 210px;
-                        
-                        border-radius: 10px;
-    
-                        object-fit: contain; /* 이미지 비율 유지하면서 잘림 */
-                        display: block; /* 이미지 아래 여백 없애기 위해 block으로 설정 */
-                        overflow: hidden;
-                        margin: 0 auto;
-                        
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                }
-
-                &__desc {
-
-                    &__title {
-                        @include H5;
-                        color: $color-purple-000;
-                        
-                        display: inline-block;
-                        margin-bottom: 12px;
-                        
-                        /* 문장이 길어질 때 사용 */
-                        width: 100%;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis; // 글자가 넘어가면 말줄임(...) 표시
-                    }
-
-                    &__users {
-                        display: flex;
-                        align-items: center;
-                        border-bottom: 1px solid $color-neteral-002;
-                        padding-bottom: 10px;
-
-                        img:nth-child(2) {
-                            margin-left: -5%;
-                        }
-                        
-                        span {
-                            @include Caption;
-                            margin-left: 8px;
-                        }
-
-                    }
-
-                    &__bid {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-
-                        margin-top: 10px;
-
-                        &__currencyContent {
-                            .currencyTitle {
-                                @include Caption;
-                                color: $color-text-003;
-                            }
-                            .currencyImage {
-                                display: flex;
-                                align-items: center;
-                                .currency {
-                                    @include Caption;
-                                    color: $color-text-001;
-                                }
-                            }
-                        }
-
-                        button {
-                            width: 86px;
-                            height: 29px;
-
-                            border-radius: 24px;
-                            border: none;
-
-                            color:$color-text-004;
-                            background-color: $color-purple-001;
-                        }
-                    }
-                }
-                
-            }
             
             .loadButton {
                 display: flex;
@@ -813,21 +535,6 @@
                         display: none;
                     }
                 }
-
-                .wrapper {
-                    width: calc((100% - 48px) / 3);
-                    flex-shrink: 0; // 크기가 줄어들지 않게
-
-                    .nftImage {
-                        width: 100%;
-                        overflow: hidden;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;  /* 이미지 비율을 유지하면서 div에 맞게 조정 */
-                        }
-                    }
-                }
             }
 
             /* Meet Our Talented Creators UI 부분 */
@@ -851,23 +558,6 @@
             }
 
             /* Explore UI 부분 */
-            &__exploreBox {
-
-                .wrapper {
-                    width: calc((100% - 48px) / 3);
-                    flex-shrink: 0;
-
-                    .nftImage {
-                        width: 100%;
-                        overflow: hidden;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;  /* 이미지 비율을 유지하면서 div에 맞게 조정 */
-                        }
-                    }
-                }
-            }
             
             /* Join Our Community UI 부분*/
             &__communityBox {
@@ -1048,10 +738,6 @@
                         color: $color-purple-000;
                     }
                 }
-
-                .wrapper {
-                    width: 100%;
-                }
             }
 
             /* Meet Our Talented Creators UI 부분 */
@@ -1096,9 +782,6 @@
                             padding: 5px 16.5px;
                         }
                     }
-                }
-                .wrapper {
-                    width: 100%;
                 }
                 .loadButton {
                     button {
