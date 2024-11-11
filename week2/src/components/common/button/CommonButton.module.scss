@@ -1,0 +1,47 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+    // 버튼 사이즈
+    &.small {
+        padding: 12px 50px;
+        @include Button-WorkSans;
+    }
+
+    &.medium {
+        padding: 19px 50px;
+        @include Button-WorkSans;
+    }
+
+    &.large {
+        padding: 20.5px 50px;
+        @include H5-WorkSans;
+    }
+
+    // 버튼 스타일
+    &.filled {
+        background-color: $color-call-to-action;
+        color: $color-text;
+        border: none;
+    }
+
+    &.outlined {
+        background-color: $color-background;
+        color: $color-text;
+        border: 2px solid $color-call-to-action;
+    }
+
+    // 아이콘 스타일
+    &.withIcon {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}
