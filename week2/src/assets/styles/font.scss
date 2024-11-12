@@ -108,8 +108,8 @@
     line-height: 140%;
 }
 
-// Button (Secondary, Tertiary)-WorkSans
-@mixin Button-WorkSans {
+// BaseSemi (Body)-WorkSans
+@mixin BaseSemi-WorkSans {
     font-family: 'Work Sans', serif;
     font-size: 16px;
     font-weight: 600;

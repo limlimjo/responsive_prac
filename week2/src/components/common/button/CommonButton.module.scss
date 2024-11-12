@@ -5,16 +5,22 @@
     border-radius: 20px;
 
     // 버튼 사이즈
+    &.xSmall {
+        padding: 0 30px;
+        height: 60px;
+        @include BaseSemi-WorkSans;
+    }
+
     &.small {
         padding: 12px 50px;
-        @include Button-WorkSans;
+        @include BaseSemi-WorkSans;
     }
 
     &.medium {
         padding: 19px 50px;
-        @include Button-WorkSans;
+        @include BaseSemi-WorkSans;
     }
-
+ 
     &.large {
         padding: 20.5px 50px;
         @include H5-WorkSans;
