@@ -1,0 +1,89 @@
+.footer {
+    background-color: $color-background-secondary;
+    padding: 40px 115.29px;
+
+    h5 {
+        @include H5-SpaceMono;
+        color: $color-text-basic;
+        margin-bottom: 25px;
+    }
+
+    p, li {
+        @include Base-WorkSans;
+        color: $color-text-gray;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 30px;
+
+        &__menu1 {
+            display: flex;
+            flex-direction: column;
+            width: 327px;
+
+            &__title {
+                display: flex;
+
+                span {
+                    display: inline-block;
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 12px;
+                    background: url($icon_storeFront) no-repeat;
+                }
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            &__community {
+
+                p {
+                    margin-bottom: 15px;
+                }
+
+                &__logo {
+                    display: flex;
+                    gap: 5px;
+                }
+            }
+        }
+
+        &__menu2 {
+            ul > li {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__menu3 {
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            &__subscribeBtn {
+                display: flex;
+                width: 420px;
+                position: relative;
+
+                input {
+                    width: 100%;
+                    height: 60px;
+                    border-radius: 20px;
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        @include Caption-WorkSans;
+        color: $color-text-gray;
+        border-top: 1px solid $color-caption-label-text;
+        padding-top: 20px;
+    }
+}

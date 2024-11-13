@@ -29,13 +29,13 @@
     // 버튼 스타일
     &.filled {
         background-color: $color-call-to-action;
-        color: $color-text;
+        color: $color-text-basic;
         border: none;
     }
 
     &.outlined {
         background-color: $color-background;
-        color: $color-text;
+        color: $color-text-basic;
         border: 2px solid $color-call-to-action;
     }
 
