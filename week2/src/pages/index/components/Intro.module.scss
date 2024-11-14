@@ -1,0 +1,40 @@
+.intro {
+    padding: 80px 115px;
+    &__mainBox {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+        color: $color-text-basic;
+        .title {
+            @include H2-WorkSans;
+        }
+        .desc {
+            @include Base-WorkSans;
+        }
+    }
+
+    &__searchBox {
+        position: relative;
+
+        input {
+            width: 1050px;
+            height: 60px;
+            padding: 19px 20px;
+            border-radius: 20px;
+            border: 1px solid $color-background-secondary;
+            background-color: transparent;
+        }
+
+        span {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: url($icon_magnifyingGlass) no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 18px;
+            right: 100px;
+        }
+    }
+}
