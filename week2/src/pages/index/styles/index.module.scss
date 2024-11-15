@@ -7,13 +7,12 @@
         align-items: center;
         margin: 10px 115px 0px 115px;
         height: 60px;
-        color: $color-text-basic;
 
         &__menu {
             display: flex;
             gap: 16px;
-            margin: 14.5px 202.5px;
-
+            padding: 14.5px 202.5px;
+            
             p {
                 @include H5-WorkSans;
             }
@@ -21,9 +20,21 @@
             span {
                 padding: 5px 10px;
                 border-radius: 20px;
-                background-color: $color-caption-label-text;
                 @include Base-SpaceMono;
+            }
+
+            &.active {
                 color: $color-text-basic;
+                span {
+                    background-color: $color-caption-label-text;
+                }
+            }
+    
+            &.inactive {
+                color: $color-caption-label-text;
+                span {
+                    background-color: $color-background-secondary;
+                }
             }
         }
     }
