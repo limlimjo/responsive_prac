@@ -1,0 +1,74 @@
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px 115px; // 이 부분 다시 한번 확인 체크
+    background-color: $color-background-secondary;
+
+    .wrapper {
+        background-color: $color-background;
+        border-radius: 20px;
+
+        &__image {
+            margin-bottom: 20px;
+        }
+
+        &__desc {
+            margin: 20px 30px;
+    
+            .title {
+                @include H5-WorkSans;
+                color: $color-text-basic;
+                margin-bottom: 5px;
+            }
+    
+            .users {
+                display: flex;
+                gap: 12px;
+                span {
+                    @include Base-SpaceMono;
+                    color: $color-text-basic;
+                }
+            }
+
+            .info {
+                margin-bottom: 25px;;
+            }
+    
+            .bid {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 25px;
+                &__priceCont {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+    
+                    .title {
+                        @include Caption-SpaceMono;
+                        color: $color-caption-label-text;
+                    }
+                    .price {
+                        @include Base-SpaceMono;
+                        color: $color-text-basic;
+                    }
+                }
+
+                &__highestBidCont {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+    
+                    .title {
+                        @include Caption-SpaceMono;
+                        color: $color-caption-label-text;
+                    }
+                    .price {
+                        @include Base-SpaceMono;
+                        color: $color-text-basic;
+                    }
+                }
+            }
+        }
+    }
+}
