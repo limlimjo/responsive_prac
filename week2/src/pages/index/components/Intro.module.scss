@@ -4,6 +4,10 @@
     @media screen and (max-width: $tablet-size) {
         padding: 60px 77px;
     }
+    /* 반응형(모바일) */
+    @media screen and (max-width: $mobile-size) {
+        padding: 40px 30px;
+    }
     &__mainBox {
         display: flex;
         flex-direction: column;
@@ -15,6 +19,10 @@
             /* 반응형(태블릿) */
             @media screen and (max-width: $tablet-size) {
                 @include H3-WorkSans;
+            }
+            /* 반응형(모바일) */
+            @media screen and (max-width: $mobile-size) {
+                @include H4-WorkSans;
             }
         }
         .desc {
@@ -28,6 +36,10 @@
         /* 반응형(태블릿) */
         @media screen and (max-width: $tablet-size) {
             width: 680px;
+        }
+        /* 반응형(모바일) */
+        @media screen and (max-width: $mobile-size) {
+            width: 315px;
         }
 
         input {

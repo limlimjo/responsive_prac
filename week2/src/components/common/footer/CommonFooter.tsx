@@ -44,6 +44,17 @@ const CommonFooter = () => {
                         onClick={() => alert("Subscribe")}
                     />
                 </div>
+                <div className={styles.footer__top__menu3__subscribeMobileBtn}>
+                    <input type="text" placeholder='Enter Your Email Address' />
+                    <CommonButton
+                        label="Subscribe"
+                        size="medium"
+                        variant="filled"
+                        icon="src/assets/icons/icon_envelopeSimple.svg"
+                        style={{ width: '100%', height: '46px' }}
+                        onClick={() => alert("Subscribe")}
+                    />
+                </div>
             </div>
         </div>
         <div className={styles.footer__copyright}>

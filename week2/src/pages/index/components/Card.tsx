@@ -10,10 +10,13 @@ const Card = ({ data }) => {
         const handleResize = () => {
             let count;
 
+            // 모바일
             if (window.innerWidth <= 375) {
                 count = 5;
+            // 태블릿
             } else if (window.innerWidth <= 834) {
                 count = 8;
+            // PC
             } else {
                 count = 12;
             }

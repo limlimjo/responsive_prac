@@ -12,6 +12,10 @@
         @media screen and (max-width: $tablet-size) {
             width: 680px;
         }
+        /* 반응형(모바일) */
+        @media screen and (max-width: $mobile-size) {
+            width: 315px;
+        }
 
         &__menu {
             display: flex;
@@ -32,6 +36,11 @@
                 padding: 5px 10px;
                 border-radius: 20px;
                 @include Base-SpaceMono;
+
+                /* 반응형(모바일) */
+                @media screen and (max-width: $mobile-size) {
+                    display: none;
+                }
             }
 
             &.active {
