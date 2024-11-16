@@ -8,9 +8,16 @@ const Card = ({ data }) => {
     // 화면 크기에 따라 카드 수 변경
     useEffect(() => {
         const handleResize = () => {
-            const width = window.innerWidth;
-            
-            setNftInfo(data);
+            let count;
+
+            if (window.innerWidth <= 375) {
+                count = 5;
+            } else if (window.innerWidth <= 834) {
+                count = 8;
+            } else {
+                count = 12;
+            }
+            setNftInfo(data.slice(0, count));
         };
 
         // 초기 사이즈 확인
@@ -42,12 +49,12 @@ const Card = ({ data }) => {
                         </div>
                         <div className={styles.bid}>
                             <div className={styles.bid__priceCont}>
-                                <span className={styles.title}>price</span>
+                                <span className={styles.title}>Price</span>
                                 <span className={styles.price}>{price} ETH</span>
                             </div>
                             <div className={styles.bid__highestBidCont}>
-                                <span className={styles.title}>highest bid</span>
-                                <span className={styles.price}>{highestBid} ETH</span>
+                                <span className={styles.title}>Highest Bid</span>
+                                <span className={styles.price}>{highestBid} wETH</span>
                             </div>
                         </div>
                     </div>

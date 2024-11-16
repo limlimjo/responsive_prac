@@ -2,10 +2,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    padding: 60px 115px; // 이 부분 다시 한번 확인 체크
-    background-color: $color-background-secondary;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    /* 반응형(태블릿) */
+    @media screen and (max-width: $tablet-size) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .wrapper {
+        width: 330px;
         background-color: $color-background;
         border-radius: 20px;
 

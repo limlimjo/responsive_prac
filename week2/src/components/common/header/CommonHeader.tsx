@@ -23,6 +23,7 @@ const CommonHeader = () => {
                 onClick={() => alert("Sign Up")}
             />
         </div>
+        <span className={styles.header__menuLogo}></span>
     </div>
   );
 }

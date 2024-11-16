@@ -5,16 +5,27 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 10px 115px 0px 115px;
-        height: 60px;
+        width: 1050px;
+        height: 100%;
+        margin: 10px auto 0px;
+        /* 반응형(태블릿) */
+        @media screen and (max-width: $tablet-size) {
+            width: 680px;
+        }
 
         &__menu {
             display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 16px;
-            padding: 14.5px 202.5px;
+            width: 50%;
             
             p {
                 @include H5-WorkSans;
+                /* 반응형(태블릿) */
+                @media screen and (max-width: $tablet-size) {
+                    @include BaseSemi-WorkSans;
+                }
             }
 
             span {
@@ -25,6 +36,8 @@
 
             &.active {
                 color: $color-text-basic;
+                border-bottom: 2px solid $color-caption-label-text;
+                padding-bottom: 14px;
                 span {
                     background-color: $color-caption-label-text;
                 }
@@ -37,5 +50,12 @@
                 }
             }
         }
+    }
+
+    &__contents {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-background-secondary;
     }
 }

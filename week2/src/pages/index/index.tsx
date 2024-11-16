@@ -42,7 +42,9 @@ const index = () => {
         </a>
       </div>
       {/* 카드 UI */}
-      <Card data={CARD_LIST} />
+      <div className={styles.page__contents}>
+        <Card data={CARD_LIST} />
+      </div>
       {/* 공통 푸터 */}
       <CommonFooter />
     </div>
