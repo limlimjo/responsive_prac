@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: $color-text-basic;
+    padding: 15px 30px;
+
+    &__leftBox {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        span {
+            @include H5-SpaceMono;
+        }
+    }
+
+    &__rightBox {
+        display: flex;
+        align-items: center;
+        &__nav {
+            display: flex;
+            gap: 10px;
+
+            li {
+                padding: 12px 20px;
+                @include BaseSemi-WorkSans;
+            }
+        }
+    }
+}

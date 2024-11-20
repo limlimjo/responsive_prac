@@ -1,6 +1,9 @@
 // react-responsive 라이브러리 사용하여 반응형 웹 구현
 import { useMediaQuery } from 'react-responsive';
 import type { PropsWithChildren } from 'react';
+import { Header } from './shared/ui/header/Header';
+import styles from './App.module.scss';
+import { Footer } from './shared/ui/footer/Footer';
 
 const Desktop = ({ children }: PropsWithChildren) => {
   const isDesktop = useMediaQuery({ minWidth: 1280 });
@@ -20,15 +23,16 @@ const Mobile = ({ children }: PropsWithChildren) => {
 function App() {
 
   return (
-    <div>
+    <div className={styles.page}>
       <Desktop>
-        <div>데스크탑</div>
+        <div>PC</div>
       </Desktop>
       <Tablet>
         <div>태블릿</div>
       </Tablet>
       <Mobile>
-        <div>모바일</div>
+        <Header.Mobile/>
+        <Footer.Mobile/>
       </Mobile>
     </div>
   );

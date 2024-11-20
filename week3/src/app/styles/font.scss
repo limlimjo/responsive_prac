@@ -1,0 +1,125 @@
+// font-family: Space Mono
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// font-family: Work Sans
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+// H1-SpaceMono
+@mixin H1-SpaceMono {
+    font-family: 'Space Mono', serif;
+    font-size: 67px;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+// H2-SpaceMono
+@mixin H2-SpaceMono {
+    font-family: 'Space Mono', serif;
+    font-size: 51px;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+// H3-SpaceMono
+@mixin H3-SpaceMono {
+    font-family: 'Space Mono', serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+// H4-SpaceMono
+@mixin H4-SpaceMono {
+    font-family: 'Space Mono', serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+// H5-SpaceMono
+@mixin H5-SpaceMono {
+    font-family: 'Space Mono', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 160%;
+}
+
+// Base (Body)-SpaceMono
+@mixin Base-SpaceMono {
+    font-family: 'Space Mono', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+// Caption-SpaceMono
+@mixin Caption-SpaceMono {
+    font-family: 'Space Mono', serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 110%;
+}
+
+// H1-WorkSans
+@mixin H1-WorkSans {
+    font-family: 'Work Sans', serif;
+    font-size: 67px;
+    font-weight: 600; // SemiBold
+    line-height: 110%;
+}
+
+// H2-WorkSans
+@mixin H2-WorkSans {
+    font-family: 'Work Sans', serif;
+    font-size: 51px;
+    font-weight: 600;
+    line-height: 110%;
+}
+
+// H3-WorkSans
+@mixin H3-WorkSans {
+    font-family: 'Work Sans', serif;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+// H4-WorkSans
+@mixin H4-WorkSans {
+    font-family: 'Work Sans', serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+// H5-WorkSans
+@mixin H5-WorkSans {
+    font-family: 'Work Sans', serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+// Base (Body)-WorkSans
+@mixin Base-WorkSans {
+    font-family: 'Work Sans', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+// BaseSemi (Body)-WorkSans
+@mixin BaseSemi-WorkSans {
+    font-family: 'Work Sans', serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+// Caption-SpaceMono
+@mixin Caption-WorkSans {
+    font-family: 'Work Sans', serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 110%;
+}
