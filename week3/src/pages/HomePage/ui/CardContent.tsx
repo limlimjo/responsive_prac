@@ -10,7 +10,27 @@ const Desktop = () => {
 };
 
 const Tablet = () => {
+    const displayCard = CARD_LIST.slice(0,6);
 
+    return (
+        <div className={styles.cardContent}>
+            <div className={styles.cardContent__title}>
+                <p>More From This Artist</p>
+                <CommonButton
+                    label="Go To Artist Page"
+                    size="medium"
+                    variant="outlined"
+                    icon="src/shared/assets/icons/icon_arrowRight.svg"
+                    onClick={() => alert("Go To Artist Page")}
+                />
+            </div>
+            <div className={styles.cardContent__cardContainer}>
+                {displayCard.map((item) => (
+                    <Card key={item.id} item={item} />
+                ))}
+            </div>
+        </div>
+    );
 };
 
 const Mobile = () => {

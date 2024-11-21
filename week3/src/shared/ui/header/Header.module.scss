@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     padding: 15px 30px;
+    @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+        padding: 15px 50px;
+    }
 
     &__leftBox {
         display: flex;

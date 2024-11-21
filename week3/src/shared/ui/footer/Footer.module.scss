@@ -1,6 +1,9 @@
 .footer {
     background-color: $color-background-secondary;
     padding: 40px 30px;
+    @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+        padding: 40px 72px;
+    }
     border-top: 2px solid $color-background;
 
     h5 {
@@ -68,13 +71,23 @@
             &__subscribeBtn {
                 display: block;
 
+                @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+                    display: flex;
+                    width: 420px;
+                    position: relative;
+                }
+
                 input {
                     width: 100%;
                     height: 46px;
+                    @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+                        height: 60px;
+                    }
                     border-radius: 20px;
                     border: none;
                     padding-left: 20px;
                     margin-bottom: 16px;
+                    color: $color-background;
 
                     &::placeholder {
                         color: $color-background;
