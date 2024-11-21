@@ -5,6 +5,9 @@
     @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
         padding: 15px 50px;
     }
+    @media screen and (min-width: $pc-min-width) {
+        padding: 20px 50px;
+    }
 
     &__leftBox {
         display: flex;
@@ -16,16 +19,18 @@
         }
     }
 
-    &__rightBox {
-        display: flex;
-        align-items: center;
-        &__nav {
+    @media screen and (min-width: $pc-min-width) {
+        &__rightBox {
             display: flex;
-            gap: 10px;
-
-            li {
-                padding: 12px 20px;
-                @include BaseSemi-WorkSans;
+            align-items: center;
+            &__nav {
+                display: flex;
+                gap: 10px;
+    
+                li {
+                    padding: 12px 20px;
+                    @include BaseSemi-WorkSans;
+                }
             }
         }
     }

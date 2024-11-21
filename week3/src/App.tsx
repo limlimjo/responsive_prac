@@ -27,7 +27,10 @@ function App() {
   return (
     <div className={styles.page}>
       <Desktop>
-        <div>데스크랍</div>
+        <Header.Desktop/>
+        <Intro.Desktop/>
+        <CardContent.Desktop/>
+        <Footer.Desktop/>
       </Desktop>
       <Tablet>
         <Header.Tablet/>
