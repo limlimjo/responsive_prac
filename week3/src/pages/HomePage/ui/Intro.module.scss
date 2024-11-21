@@ -1,0 +1,129 @@
+.mainImg {
+    img {
+        width: 100%;
+    }
+}
+
+.intro {
+    padding: 40px 30px;
+    &__nftInfo {
+        &__title {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+            p:nth-child(1) {
+                @include H4-WorkSans;
+            }
+
+            p:nth-child(2) {
+                @include Base-WorkSans;
+                color: $color-caption-label-text;
+            }
+        }
+
+        &__auction {
+            padding: 30px 30px;
+            margin-bottom: 20px;
+            background-color: $color-background-secondary;
+            border-radius: 20px;
+
+            p {
+                @include Caption-SpaceMono;
+                margin-bottom: 10px;
+            }
+
+            .timer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 30px;
+
+                &__time {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &__value {
+                        @include H3-SpaceMono;
+                        margin-bottom: 5px;
+                    }
+
+                    &__label {
+                        @include Caption-SpaceMono;
+                    }
+
+                    &__colon {
+                        @include H4-SpaceMono;
+                    }
+                }
+            }
+            .bidBtn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &__createdBy {
+            margin-bottom: 20px;
+            p {
+                @include Base-SpaceMono;
+                color: $color-caption-label-text;
+                margin-bottom: 10px;
+            }
+
+            .creator {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+        }
+
+        &__description {
+            margin-bottom: 20px;
+            p:nth-child(1) {
+                @include Base-SpaceMono;
+                color: $color-caption-label-text;
+                margin-bottom: 10px;
+            }
+
+            p:not(:nth-child(1)) {
+                @include Base-WorkSans;
+                margin-bottom: 20px;           
+            }
+        }
+
+        &__details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+            p {
+                @include Base-SpaceMono;
+                color: $color-caption-label-text;
+            }
+            .detailBtn {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+        &__tags {
+            p {
+                @include Base-SpaceMono;
+                color: $color-caption-label-text;
+                margin-bottom: 20px;
+            }
+
+            .tagBtns {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+        }
+    }
+}

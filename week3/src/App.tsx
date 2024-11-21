@@ -4,6 +4,8 @@ import type { PropsWithChildren } from 'react';
 import { Header } from './shared/ui/header/Header';
 import styles from './App.module.scss';
 import { Footer } from './shared/ui/footer/Footer';
+import { Intro } from './pages/HomePage/ui/Intro';
+import { CardContent } from './pages/HomePage/ui/CardContent';
 
 const Desktop = ({ children }: PropsWithChildren) => {
   const isDesktop = useMediaQuery({ minWidth: 1280 });
@@ -32,6 +34,8 @@ function App() {
       </Tablet>
       <Mobile>
         <Header.Mobile/>
+        <Intro.Mobile/>
+        <CardContent.Mobile/>
         <Footer.Mobile/>
       </Mobile>
     </div>

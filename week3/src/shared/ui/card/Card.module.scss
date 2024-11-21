@@ -1,0 +1,63 @@
+.wrapper {
+    width: 330px;
+    border-radius: 20px;
+    background-color: $color-background-secondary;
+
+    &__image {
+        margin-bottom: 20px;
+    }
+
+    &__desc {
+        margin: 20px 30px;
+
+        .title {
+            @include H5-WorkSans;
+            margin-bottom: 5px;
+        }
+
+        .users {
+            display: flex;
+            gap: 12px;
+            span {
+                @include Base-SpaceMono;
+            }
+        }
+
+        .info {
+            margin-bottom: 25px;;
+        }
+
+        .bid {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            &__priceCont {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .title {
+                    @include Caption-SpaceMono;
+                    color: $color-caption-label-text;
+                }
+                .price {
+                    @include Base-SpaceMono;
+                }
+            }
+
+            &__highestBidCont {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                .title {
+                    @include Caption-SpaceMono;
+                    color: $color-caption-label-text;
+                }
+                .price {
+                    @include Base-SpaceMono;
+                }
+            }
+        }
+    }
+}
