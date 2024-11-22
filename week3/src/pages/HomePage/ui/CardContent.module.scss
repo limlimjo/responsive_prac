@@ -8,7 +8,7 @@
     @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width),
            screen and (min-width: $pc-min-width) {
         &__title {
-            width: calc(100% - 170px);
+            width: 100%;
             display: flex;
             justify-content: space-between;
         }
@@ -20,6 +20,7 @@
     }
 
     &__cardContainer {
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
