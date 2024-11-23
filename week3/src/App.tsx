@@ -1,9 +1,9 @@
 // react-responsive 라이브러리 사용하여 반응형 웹 구현
 import { useMediaQuery } from 'react-responsive';
 import type { PropsWithChildren } from 'react';
-import { Header } from './shared/ui/header/Header';
+import { Headers } from './shared/ui/header/Header';
 import styles from './App.module.scss';
-import { Footer } from './shared/ui/footer/Footer';
+import { Footers } from './shared/ui/footer/Footer';
 import { Intro } from './pages/HomePage/ui/Intro';
 import { CardContent } from './pages/HomePage/ui/CardContent';
 
@@ -27,22 +27,22 @@ function App() {
   return (
     <div className={styles.page}>
       <Desktop>
-        <Header.Desktop/>
+        <Headers.Desktop/>
         <Intro.Desktop/>
         <CardContent.Desktop/>
-        <Footer.Desktop/>
+        <Footers.Desktop/>
       </Desktop>
       <Tablet>
-        <Header.Tablet/>
+        <Headers.Tablet/>
         <Intro.Tablet/>
         <CardContent.Tablet/>
-        <Footer.Tablet/>
+        <Footers.Tablet/>
       </Tablet>
       <Mobile>
-        <Header.Mobile/>
+        <Headers.Mobile/>
         <Intro.Mobile/>
         <CardContent.Mobile/>
-        <Footer.Mobile/>
+        <Footers.Mobile/>
       </Mobile>
     </div>
   );
