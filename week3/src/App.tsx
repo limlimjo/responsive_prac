@@ -4,7 +4,7 @@ import type { PropsWithChildren } from 'react';
 import { Headers } from './shared/ui/header/Header';
 import styles from './App.module.scss';
 import { Footers } from './shared/ui/footer/Footer';
-import { Intro } from './pages/HomePage/ui/Intro';
+import { Intros } from './pages/HomePage/ui/Intro';
 import { CardContent } from './pages/HomePage/ui/CardContent';
 
 const Desktop = ({ children }: PropsWithChildren) => {
@@ -28,19 +28,19 @@ function App() {
     <div className={styles.page}>
       <Desktop>
         <Headers.Desktop/>
-        <Intro.Desktop/>
+        <Intros.Desktop/>
         <CardContent.Desktop/>
         <Footers.Desktop/>
       </Desktop>
       <Tablet>
         <Headers.Tablet/>
-        <Intro.Tablet/>
+        <Intros.Tablet/>
         <CardContent.Tablet/>
         <Footers.Tablet/>
       </Tablet>
       <Mobile>
         <Headers.Mobile/>
-        <Intro.Mobile/>
+        <Intros.Mobile/>
         <CardContent.Mobile/>
         <Footers.Mobile/>
       </Mobile>
