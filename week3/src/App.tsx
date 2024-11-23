@@ -5,7 +5,7 @@ import { Headers } from './shared/ui/header/Header';
 import styles from './App.module.scss';
 import { Footers } from './shared/ui/footer/Footer';
 import { Intros } from './pages/HomePage/ui/Intro';
-import { CardContent } from './pages/HomePage/ui/CardContent';
+import { CardContents } from './pages/HomePage/ui/CardContent';
 
 const Desktop = ({ children }: PropsWithChildren) => {
   const isDesktop = useMediaQuery({ minWidth: 1280 });
@@ -29,19 +29,19 @@ function App() {
       <Desktop>
         <Headers.Desktop/>
         <Intros.Desktop/>
-        <CardContent.Desktop/>
+        <CardContents.Desktop/>
         <Footers.Desktop/>
       </Desktop>
       <Tablet>
         <Headers.Tablet/>
         <Intros.Tablet/>
-        <CardContent.Tablet/>
+        <CardContents.Tablet/>
         <Footers.Tablet/>
       </Tablet>
       <Mobile>
         <Headers.Mobile/>
         <Intros.Mobile/>
-        <CardContent.Mobile/>
+        <CardContents.Mobile/>
         <Footers.Mobile/>
       </Mobile>
     </div>
