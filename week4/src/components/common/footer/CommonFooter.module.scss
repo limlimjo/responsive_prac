@@ -1,0 +1,136 @@
+.footer {
+    background-color: $color-background-secondary;
+    padding: 40px 115.29px;
+    /* 반응형(태블릿) */
+    @media screen and (max-width: $tablet-size) {
+        padding: 40px 72px;
+    }
+    /* 반응형(모바일) */
+    @media screen and (max-width: $mobile-size) {
+        padding: 40px 30px;
+    }
+    border-top: 2px solid $color-background;
+
+    h5 {
+        @include H5-SpaceMono;
+        color: $color-text-basic;
+        margin-bottom: 25px;
+        /* 반응형(태블릿) */
+        @media screen and (max-width: $tablet-size) {
+            margin-bottom: 20px;
+        }
+    }
+
+    p, li {
+        @include Base-WorkSans;
+        color: $color-text-gray;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        /* 반응형(태블릿) */
+        @media screen and (max-width: $tablet-size) {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        margin-bottom: 30px;
+
+        &__menu1 {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                display: flex;
+
+                span {
+                    display: inline-block;
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 12px;
+                    background: url($icon_storeFront) no-repeat;
+                }
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            &__community {
+
+                p {
+                    margin-bottom: 15px;
+                }
+
+                &__logo {
+                    display: flex;
+                    gap: 5px;
+                }
+            }
+        }
+
+        &__menu2 {
+            ul > li {
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        &__menu3 {
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            &__subscribeBtn {
+                display: flex;
+                width: 420px;
+                position: relative;
+
+                input {
+                    width: 100%;
+                    height: 60px;
+                    border-radius: 20px;
+                    border: none;
+                    padding-left: 20px;
+                }
+                /* 반응형(모바일) */
+                @media screen and (max-width: $mobile-size) {
+                    display: none;
+                }
+            }
+
+            &__subscribeMobileBtn {
+                display: none;
+                /* 반응형(모바일) */
+                @media screen and (max-width: $mobile-size) {
+                    display: block;
+
+                    input {
+                        width: 100%;
+                        height: 46px;
+                        border-radius: 20px;
+                        border: none;
+                        padding-left: 20px;
+                        margin-bottom: 16px;
+
+                        &::placeholder {
+                            color: $color-background;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        @include Caption-WorkSans;
+        color: $color-text-gray;
+        border-top: 1px solid $color-caption-label-text;
+        padding-top: 20px;
+    }
+}
