@@ -1,0 +1,24 @@
+.commonInput {
+    display: flex;
+    align-items: center;
+    width: 330px;
+
+    &__inputBox {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+
+        padding: 8px 12px;
+
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 1);
+
+        &__input {
+            outline: none;
+            border: none;
+
+            text-indent: 10px;
+        }
+    }
+}
