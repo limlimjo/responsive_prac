@@ -116,6 +116,14 @@
     line-height: 140%;
 }
 
+// Body Text-WorkSans
+@mixin Body-WorkSans {
+    font-family: 'Work Sans', serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
 // Caption-SpaceMono
 @mixin Caption-WorkSans {
     font-family: 'Work Sans', serif;
