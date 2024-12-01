@@ -16,6 +16,7 @@ const CommonButton = ({
         onClick={onClick}
     >
         {icon && <img src={icon} alt="icon" className={styles.icon} />}
+        {/* {icon && <object type="image/svg+xml" data={icon} className={styles.icon}></object>} */}
         {label}
     </button>
   );

@@ -14,7 +14,7 @@ const Account = () => {
             <div className={styles.account__createAccount__accountBox}>
                 <div className={styles.inputBox}>
                     <CommonInput
-                        imgSrc="src/assets/icons/icon_user.svg"
+                        imgSrc="src/assets/icons/icon_user_gray.svg"
                         imgAlt="userIcon"
                         placeholder="Username"
                     />
