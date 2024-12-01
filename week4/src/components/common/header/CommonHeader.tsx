@@ -9,6 +9,7 @@ const CommonHeader = () => {
             <img src="src/assets/icons/icon_storeFront.svg" alt="icon_storeFront" />
             <span>NFT Marketplace</span>
         </div>
+        <img src="src/assets/icons/icon_burgurMenu.svg" alt="icon_burgerMenu" />
         <div className={styles.header__rightBox}>
             <ul className={styles.header__rightBox__nav}>
                 <li>Marketplace</li>
@@ -23,7 +24,6 @@ const CommonHeader = () => {
                 onClick={() => alert("Sign Up")}
             />
         </div>
-        <span className={styles.header__menuLogo}></span>
     </div>
   );
 }

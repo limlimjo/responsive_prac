@@ -1,6 +1,7 @@
 import styles from './CommonButton.module.scss';
 
 const CommonButton = ({
+    className = '',
     label, // 버튼 텍스트
     size = 'medium', // 버튼 사이즈 (small / medium / large)
     variant = 'filled', // 버튼 스타일 (filled / outlined)
@@ -10,7 +11,7 @@ const CommonButton = ({
 }) => {
   return (
     <button 
-        className={`${styles.button} ${styles[size]} ${styles[variant]} ${styles.withIcon}`} 
+        className={`${styles.button} ${styles[size]} ${styles[variant]} ${styles.withIcon} ${className}`} 
         style={style}
         onClick={onClick}
     >

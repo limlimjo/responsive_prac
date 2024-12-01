@@ -1,15 +1,12 @@
 .header {
     display: flex;
     justify-content: space-between;
-    color: $color-text-basic;
-    padding: 20px 50px;
-    /* 반응형(태블릿) */
-    @media screen and (max-width: $tablet-size) {
+    padding: 15px 30px;
+    @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
         padding: 15px 50px;
     }
-    /* 반응형(모바일) */
-    @media screen and (max-width: $mobile-size) {
-        padding: 15px 30px;
+    @media screen and (min-width: $pc-min-width) {
+        padding: 20px 50px;
     }
 
     &__leftBox {
@@ -17,49 +14,35 @@
         align-items: center;
         gap: 12px;
 
-        /* 반응형(태블릿) */
-        @media screen and (max-width: $tablet-size) {
-            img {
-                width: 24px;
-                height: 24px;
-            }
-        }
-
         span {
             @include H5-SpaceMono;
-            /* 반응형(태블릿) */
-            @media screen and (max-width: $tablet-size) {
-                @include Base-SpaceMono;
-            }
         }
     }
 
-    &__rightBox {
-        display: flex;
-        align-items: center;
-        &__nav {
-            display: flex;
-            gap: 10px;
-
-            li {
-                padding: 12px 20px;
-                @include BaseSemi-WorkSans;
-            }
-        }
-        /* 반응형(태블릿) */
-        @media screen and (max-width: $tablet-size) {
+    @media screen and (min-width: $pc-min-width) {
+        img:nth-child(2) {
             display: none;
         }
-    }
-    &__menuLogo {
-        display: none;
 
-        /* 반응형(태블릿) */
-        @media screen and (max-width: $tablet-size) {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            background: url($icon_burgurMenu) no-repeat;
+        &__rightBox {
+            display: flex;
+            align-items: center;
+            &__nav {
+                display: flex;
+                gap: 10px;
+    
+                li {
+                    padding: 12px 20px;
+                    @include BaseSemi-WorkSans;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width),
+           screen and (max-width: $mobile-max-width)  {
+        &__rightBox {
+            display: none;
         }
     }
 }

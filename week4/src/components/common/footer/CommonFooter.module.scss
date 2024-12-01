@@ -1,24 +1,16 @@
 .footer {
     background-color: $color-background-secondary;
-    padding: 40px 115.29px;
-    /* 반응형(태블릿) */
-    @media screen and (max-width: $tablet-size) {
+    padding: 40px 30px;
+    @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
         padding: 40px 72px;
     }
-    /* 반응형(모바일) */
-    @media screen and (max-width: $mobile-size) {
-        padding: 40px 30px;
+    @media screen and (min-width: $pc-min-width) {
+        padding: 40px 146.29px;
     }
     border-top: 2px solid $color-background;
 
     h5 {
         @include H5-SpaceMono;
-        color: $color-text-basic;
-        margin-bottom: 25px;
-        /* 반응형(태블릿) */
-        @media screen and (max-width: $tablet-size) {
-            margin-bottom: 20px;
-        }
     }
 
     p, li {
@@ -26,30 +18,31 @@
         color: $color-text-gray;
     }
 
-    &__top {
+    &__menu {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        /* 반응형(태블릿) */
-        @media screen and (max-width: $tablet-size) {
-            flex-direction: column;
-            gap: 30px;
-        }
-
+        gap: 30px;
         margin-bottom: 30px;
 
-        &__menu1 {
+        @media screen and (min-width: $pc-min-width) {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__nftmarket {
             display: flex;
             flex-direction: column;
 
             &__title {
                 display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 20px;
 
-                span {
-                    display: inline-block;
+                img {
                     width: 32px;
                     height: 32px;
-                    margin-right: 12px;
-                    background: url($icon_storeFront) no-repeat;
                 }
             }
 
@@ -57,20 +50,17 @@
                 margin-bottom: 20px;
             }
 
-            &__community {
-
-                p {
-                    margin-bottom: 15px;
-                }
-
-                &__logo {
-                    display: flex;
-                    gap: 5px;
-                }
+            &__logo {
+                display: flex;
+                gap: 10px;
             }
         }
 
-        &__menu2 {
+        &__explore {
+            h5 {
+                margin-bottom: 20px;
+            }
+
             ul > li {
                 margin-bottom: 20px;
 
@@ -80,47 +70,50 @@
             }
         }
 
-        &__menu3 {
+        &__subscribe {
 
-            p {
+            h5, p {
                 margin-bottom: 20px;
             }
 
             &__subscribeBtn {
-                display: flex;
-                width: 420px;
-                position: relative;
+                display: block;
+
+                @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width),
+                       screen and (min-width: $pc-min-width) {
+                    display: flex;
+                    width: 420px;
+                    position: relative;
+                }
 
                 input {
                     width: 100%;
-                    height: 60px;
+                    height: 46px;
+                    @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width),
+                           screen and (min-width: $pc-min-width) {
+                        height: 60px;
+                    }
                     border-radius: 20px;
                     border: none;
                     padding-left: 20px;
+                    margin-bottom: 16px;
+                    color: $color-background;
+
+                    &::placeholder {
+                        color: $color-background;
+                    }
                 }
-                /* 반응형(모바일) */
-                @media screen and (max-width: $mobile-size) {
-                    display: none;
+
+                .showOnPcTablet {
+                    @media screen and (max-width: $mobile-max-width) {
+                        display: none;
+                    }
                 }
-            }
 
-            &__subscribeMobileBtn {
-                display: none;
-                /* 반응형(모바일) */
-                @media screen and (max-width: $mobile-size) {
-                    display: block;
-
-                    input {
-                        width: 100%;
-                        height: 46px;
-                        border-radius: 20px;
-                        border: none;
-                        padding-left: 20px;
-                        margin-bottom: 16px;
-
-                        &::placeholder {
-                            color: $color-background;
-                        }
+                .showOnMobile {
+                    @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width),
+                    screen and (min-width: $pc-min-width) {
+                        display: none;
                     }
                 }
             }
