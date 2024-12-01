@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+## week4 : NFT Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 개발환경
 
-Currently, two official plugins are available:
+1. 프로젝트 환경설정(vite 활용한 리액트 프로젝트): `npm create vite@latest`
+2. CSS 스타일링을 위한 sass 설치: `npm install sass`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+### 프로젝트 폴더 구조
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```xml
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📂icons
+ ┃ ┣ 📂images
+ ┃ ┗ 📂styles
+ ┃ ┃ ┣ 📜color.scss
+ ┃ ┃ ┣ 📜commonVal.scss
+ ┃ ┃ ┣ 📜font.scss
+ ┃ ┃ ┣ 📜icons.scss
+ ┃ ┃ ┣ 📜main.scss
+ ┃ ┃ ┗ 📜reset.scss
+ ┣ 📂components
+ ┃ ┗ 📂common
+ ┃ ┃ ┣ 📂button
+ ┃ ┃ ┃ ┣ 📜CommonButton.module.scss
+ ┃ ┃ ┃ ┗ 📜CommonButton.tsx
+ ┃ ┃ ┣ 📂footer
+ ┃ ┃ ┃ ┣ 📜CommonFooter.module.scss
+ ┃ ┃ ┃ ┗ 📜CommonFooter.tsx
+ ┃ ┃ ┣ 📂header
+ ┃ ┃ ┃ ┣ 📜CommonHeader.module.scss
+ ┃ ┃ ┃ ┗ 📜CommonHeader.tsx
+ ┃ ┃ ┗ 📂input
+ ┃ ┃ ┃ ┣ 📜CommonInput.module.scss
+ ┃ ┃ ┃ ┗ 📜CommonInput.tsx
+ ┣ 📂pages
+ ┃ ┗ 📂index
+ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┣ 📜Account.module.scss
+ ┃ ┃ ┃ ┗ 📜Account.tsx
+ ┃ ┃ ┣ 📂styles
+ ┃ ┃ ┃ ┗ 📜index.module.scss
+ ┃ ┃ ┗ 📜index.tsx
+ ┣ 📜App.tsx
+ ┣ 📜main.tsx
+ ┗ 📜vite-env.d.ts
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 작업하면서 시도해봤던 것
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- 헤더와 푸터는 이전과 동일하고 Create Account 영역 부분은 웹/태블릿 같은 경우는 왼쪽에 이미지 오른쪽에는 계정 생성하는 UI이며 모바일 같은 경우에는 상단에 이미지, 아래에 계정 생성하는 UI이다.
+웹/태블릿 같은 경우 width를 50%로씩 주어 flex를 사용하여 배치하였다.
+
+- 로고 같은 경우 웹의 Sign Up의 아이콘과 Username의 input창에 있는 아이콘이 동일한데 하나의 svg 파일을 사용하고 색깔만 바꿔줄 수 없나 찾아보다가 svg 파일에서 fill="currentColor"로 바꿔주고 부모 요소에 해당하는 color로 바꿔주면 색깔이 바뀐다고 해서 시도해보았으나 안되어 색깔이 다른 아이콘 svg 파일을 하나 더 만들어 불러왔다. 나중에 아이콘 색만 바꿔달라고 하는 경우가 있을 텐데 일일이 각 색상의 svg 이미지를 하나 더 파일에 저장하고 그 파일을 import 해오는거는 번거로울 것 같은데 효율적인 방법이 있는지 더 찾아봐야겠다.
